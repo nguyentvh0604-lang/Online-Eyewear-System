@@ -1,0 +1,15 @@
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Repositories\bin\Debug\net10.0\OpticalStore.Repositories.deps.json
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Repositories\bin\Debug\net10.0\OpticalStore.Repositories.runtimeconfig.json
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Repositories\bin\Debug\net10.0\OpticalStore.Repositories.dll
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Repositories\bin\Debug\net10.0\OpticalStore.Repositories.pdb
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Repositories\obj\Debug\net10.0\OpticalStore.Repositories.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Repositories\obj\Debug\net10.0\OpticalStore.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Repositories\obj\Debug\net10.0\OpticalStore.Repositories.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Repositories\obj\Debug\net10.0\OpticalStore.Repositories.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Repositories\obj\Debug\net10.0\OpticalStore.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Repositories\obj\Debug\net10.0\OpticalStore.Repositories.sourcelink.json
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Repositories\obj\Debug\net10.0\OpticalStore.Repositories.dll
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Repositories\obj\Debug\net10.0\refint\OpticalStore.Repositories.dll
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Repositories\obj\Debug\net10.0\OpticalStore.Repositories.pdb
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Repositories\obj\Debug\net10.0\OpticalStore.Repositories.genruntimeconfig.cache
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Repositories\obj\Debug\net10.0\ref\OpticalStore.Repositories.dll

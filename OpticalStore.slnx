@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="OpticalStore.Repositories/OpticalStore.Repositories.csproj" />
+  <Project Path="OpticalStore.Services/OpticalStore.Services.csproj" />
+  <Project Path="OpticalStore.WebApplication/OpticalStore.WebApplication.csproj" />
+</Solution>

@@ -1,0 +1,16 @@
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Services\bin\Debug\net10.0\OpticalStore.Services.deps.json
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Services\bin\Debug\net10.0\OpticalStore.Services.dll
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Services\bin\Debug\net10.0\OpticalStore.Services.pdb
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Services\bin\Debug\net10.0\OpticalStore.Repositories.dll
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Services\bin\Debug\net10.0\OpticalStore.Repositories.pdb
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Services\obj\Debug\net10.0\OpticalStore.Services.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Services\obj\Debug\net10.0\OpticalStore.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Services\obj\Debug\net10.0\OpticalStore.Services.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Services\obj\Debug\net10.0\OpticalStore.Services.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Services\obj\Debug\net10.0\OpticalStore.Services.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Services\obj\Debug\net10.0\OpticalStore.Services.sourcelink.json
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Services\obj\Debug\net10.0\OpticalS.CC2B9DB1.Up2Date
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Services\obj\Debug\net10.0\OpticalStore.Services.dll
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Services\obj\Debug\net10.0\refint\OpticalStore.Services.dll
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Services\obj\Debug\net10.0\OpticalStore.Services.pdb
+C:\Users\ASUS\source\repos\Online-Eyewear-System\OpticalStore.Services\obj\Debug\net10.0\ref\OpticalStore.Services.dll

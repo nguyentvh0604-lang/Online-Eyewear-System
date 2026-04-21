@@ -1,0 +1,25 @@
+﻿<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">
+            <i class="bi bi-eyeglasses"></i> OpticalStore
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" asp-controller="Product" asp-action="Index">Sản phẩm</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Order/Cart">Giỏ hàng</a></li>
+            </ul>
+            <ul class="navbar-nav">
+                @if (Context.Session.GetString("UserId") != null)
+                {
+                    <li class="nav-item"><a class="nav-link" href="/Order/History">Đơn hàng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Auth/Logout">Đăng xuất</a></li>
+                }
+                else
+                {
+                    <li class="nav-item"><a class="nav-link" href="/Auth/Login">Đăng nhập</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Auth/Register">Đăng ký</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav>
