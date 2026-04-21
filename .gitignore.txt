@@ -1,0 +1,12 @@
+# Visual Studio / VS Code cache
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Mac
+.DS_Store
