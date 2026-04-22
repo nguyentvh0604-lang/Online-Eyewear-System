@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using OpticalStore.Repositories.Interfaces;
 using OpticalStore.Repositories.Models;
 
@@ -46,6 +47,8 @@ namespace OpticalStore.Repositories
 
         public async Task<Order> CreateAsync(Order order)
         {
+            order.CreatedAt = DateTime.Now;
+            order.UpdatedAt = DateTime.Now;
             _context.Orders.Add(order);
             await _context.SaveChangesAsync();
             return order;
@@ -57,6 +60,28 @@ namespace OpticalStore.Repositories
             _context.Orders.Update(order);
             await _context.SaveChangesAsync();
             return order;
+        }
+
+        public async Task<IDbContextTransaction> BeginTransactionAsync()
+        {
+            return await _context.Database.BeginTransactionAsync();
+        }
+
+        public async Task CreateOrderItemsAsync(List<OrderItem> orderItems)
+        {
+            await _context.OrderItems.AddRangeAsync(orderItems);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateStatusAsync(int orderId, string status)
+        {
+            var order = await _context.Orders.FindAsync(orderId);
+            if (order != null)
+            {
+                order.Status = status;
+                order.UpdatedAt = DateTime.Now;
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

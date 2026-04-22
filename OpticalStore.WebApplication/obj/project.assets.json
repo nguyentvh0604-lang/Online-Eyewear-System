@@ -28,6 +28,19 @@
           }
         }
       },
+      "Dapper/2.1.72": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Google.Protobuf/3.32.0": {
         "type": "package",
         "compile": {
@@ -832,7 +845,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
+          "Dapper": "2.1.72",
           "Microsoft.EntityFrameworkCore": "10.0.6",
+          "MySql.Data": "9.6.0",
           "MySql.EntityFrameworkCore": "10.0.1"
         },
         "compile": {
@@ -906,6 +921,27 @@
         "lib/netstandard2.0/BouncyCastle.Cryptography.dll",
         "lib/netstandard2.0/BouncyCastle.Cryptography.xml",
         "packageIcon.png"
+      ]
+    },
+    "Dapper/2.1.72": {
+      "sha512": "ns4mGqQd9a/MhP8m6w556vVlZIa0/MfUu03zrxjZC/jlr1uVCsUac8bkdB+Fs98Llbd56rRSo1eZH5VVmeGZyw==",
+      "type": "package",
+      "path": "dapper/2.1.72",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.1.72.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net10.0/Dapper.dll",
+        "lib/net10.0/Dapper.xml",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net8.0/Dapper.dll",
+        "lib/net8.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml",
+        "readme.md"
       ]
     },
     "Google.Protobuf/3.32.0": {
@@ -2664,23 +2700,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
+    "C:\\Users\\Hoang\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\Online-Eyewear-System\\OpticalStore.WebApplication\\OpticalStore.WebApplication.csproj",
+      "projectUniqueName": "D:\\Online-Eyewear-System\\OpticalStore.WebApplication\\OpticalStore.WebApplication.csproj",
       "projectName": "OpticalStore.WebApplication",
-      "projectPath": "C:\\Users\\ASUS\\source\\repos\\Online-Eyewear-System\\OpticalStore.WebApplication\\OpticalStore.WebApplication.csproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\source\\repos\\Online-Eyewear-System\\OpticalStore.WebApplication\\obj\\",
+      "projectPath": "D:\\Online-Eyewear-System\\OpticalStore.WebApplication\\OpticalStore.WebApplication.csproj",
+      "packagesPath": "C:\\Users\\Hoang\\.nuget\\packages\\",
+      "outputPath": "D:\\Online-Eyewear-System\\OpticalStore.WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2693,11 +2729,10 @@
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\ASUS\\source\\repos\\Online-Eyewear-System\\OpticalStore.Services\\OpticalStore.Services.csproj": {
-              "projectPath": "C:\\Users\\ASUS\\source\\repos\\Online-Eyewear-System\\OpticalStore.Services\\OpticalStore.Services.csproj"
+            "D:\\Online-Eyewear-System\\OpticalStore.Services\\OpticalStore.Services.csproj": {
+              "projectPath": "D:\\Online-Eyewear-System\\OpticalStore.Services\\OpticalStore.Services.csproj"
             }
           }
         }
@@ -2716,7 +2751,6 @@
     },
     "frameworks": {
       "net10.0": {
-        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": {
@@ -2745,7 +2779,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

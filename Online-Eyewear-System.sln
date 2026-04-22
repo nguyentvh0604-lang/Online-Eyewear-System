@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpticalStore.Repositories", "OpticalStore.Repositories\OpticalStore.Repositories.csproj", "{F42DA9DF-4FAD-5008-F6CA-C18449D2C5EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpticalStore.Services", "OpticalStore.Services\OpticalStore.Services.csproj", "{CEA985F3-0691-EC68-2396-24815BA812EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpticalStore.WebApplication", "OpticalStore.WebApplication\OpticalStore.WebApplication.csproj", "{58260059-B931-EE27-5EFC-02D0D25830FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F42DA9DF-4FAD-5008-F6CA-C18449D2C5EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F42DA9DF-4FAD-5008-F6CA-C18449D2C5EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F42DA9DF-4FAD-5008-F6CA-C18449D2C5EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F42DA9DF-4FAD-5008-F6CA-C18449D2C5EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEA985F3-0691-EC68-2396-24815BA812EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEA985F3-0691-EC68-2396-24815BA812EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEA985F3-0691-EC68-2396-24815BA812EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEA985F3-0691-EC68-2396-24815BA812EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58260059-B931-EE27-5EFC-02D0D25830FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58260059-B931-EE27-5EFC-02D0D25830FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58260059-B931-EE27-5EFC-02D0D25830FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58260059-B931-EE27-5EFC-02D0D25830FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59264989-7820-45DC-899E-582BDF34518F}
+	EndGlobalSection
+EndGlobal

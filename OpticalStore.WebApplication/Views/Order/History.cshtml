@@ -1,0 +1,61 @@
+@model IEnumerable<OpticalStore.Repositories.Models.Order>
+
+@{
+    ViewData["Title"] = "Lịch sử đơn hàng";
+}
+
+<h2>Lịch sử đơn hàng</h2>
+
+@if (Model.Any())
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Mã đơn</th>
+                <th>Ngày đặt</th>
+                <th>Loại đơn</th>
+                <th>Tổng tiền</th>
+                <th>Trạng thái</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>#@order.OrderId</td>
+                    <td>@order.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>
+                        @switch (order.OrderType)
+                        {
+                            case "standard":
+                                <span>Có sẵn</span>
+                                break;
+                            case "pre_order":
+                                <span>Đặt trước</span>
+                                break;
+                            case "prescription":
+                                <span>Theo đơn</span>
+                                break;
+                        }
+                    </td>
+                    <td>@order.FinalAmount.ToString("N0") đ</td>
+                    <td>
+                        <span class="badge bg-@(order.Status == "completed" ? "success" : 
+                                              order.Status == "cancelled" ? "danger" : 
+                                              order.Status == "shipping" ? "info" : "warning")">
+                            @order.Status
+                        </span>
+                    </td>
+                    <td>
+                        <a asp-action="Detail" asp-route-id="@order.OrderId" class="btn btn-sm btn-primary">Xem chi tiết</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">Bạn chưa có đơn hàng nào.</div>
+}

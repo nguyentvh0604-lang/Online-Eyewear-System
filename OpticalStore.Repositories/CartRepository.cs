@@ -31,9 +31,37 @@ namespace OpticalStore.Repositories
 
         public async Task<CartItem> AddToCartAsync(CartItem cartItem)
         {
-            _context.CartItems.Add(cartItem);
-            await _context.SaveChangesAsync();
-            return cartItem;
+         // Kiểm tra xem sản phẩm đã có trong giỏ chưa
+         var existingItem = await _context.CartItems
+             .FirstOrDefaultAsync(c => c.UserId == cartItem.UserId && c.VariantId == cartItem.VariantId);
+    
+         if (existingItem != null)
+         {
+             // Nếu đã tồn tại, tăng số lượng
+             existingItem.Quantity += cartItem.Quantity;
+             _context.CartItems.Update(existingItem);
+             await _context.SaveChangesAsync();
+              return existingItem;
+         }
+         else
+         {
+               // Nếu chưa có, thêm mới
+              cartItem.AddedAt = DateTime.Now;
+              _context.CartItems.Add(cartItem);
+               await _context.SaveChangesAsync();
+               return cartItem;
+          }
+        }
+
+        // Bổ sung method mới
+        public async Task UpdateQuantityAsync(int cartId, int quantity)
+        {
+            var item = await _context.CartItems.FindAsync(cartId);
+         if (item != null)
+         {
+             item.Quantity = quantity;
+             await _context.SaveChangesAsync();
+            }
         }
 
         public async Task<CartItem> UpdateCartItemAsync(CartItem cartItem)
