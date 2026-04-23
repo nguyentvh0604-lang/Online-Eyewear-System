@@ -48,5 +48,3 @@
 | **Lưu trữ tạm** | `localStorage`, sessionStorage, hoặc mảng JS |
 | **Biểu đồ**     | Chart.js (tuỳ chọn)                          |
 | **Icons**       | FontAwesome / Bootstrap Icons                |
-
-## 📁 Cấu trúc thư mục dự án
