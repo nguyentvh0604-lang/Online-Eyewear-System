@@ -4,8 +4,6 @@
 
 **OpticalStore** là một ứng dụng web **tĩnh** mô phỏng giao diện và luồng nghiệp vụ của hệ thống bán kính mắt trực tuyến.
 
-> ⚠️ Dự án chỉ dừng ở mức **mockup / demo luồng** – dữ liệu (sản phẩm, giỏ hàng, đơn hàng) được lưu tạm trên `localStorage` hoặc nhúng trực tiếp trong mã nguồn. Không có xử lý thanh toán thực tế, không lưu trữ dữ liệu lâu dài.
-
 ## 🚀 Các tính năng mô phỏng (Demo)
 
 ### 👤 Luồng khách hàng
@@ -41,12 +39,10 @@
 
 ## 🧱 Công nghệ sử dụng
 
-| Thành phần      | Công nghệ                                    |
-| --------------- | -------------------------------------------- |
-| **Giao diện**   | HTML5, CSS3, Bootstrap 5                     |
-| **Tương tác**   | JavaScript (thuần)                           |
-| **Lưu trữ tạm** | `localStorage`, sessionStorage, hoặc mảng JS |
-| **Biểu đồ**     | Chart.js (tuỳ chọn)                          |
-| **Icons**       | FontAwesome / Bootstrap Icons                |
-
-## 📁 Cấu trúc thư mục dự án
+| Thành phần      | Công nghệ                                  |
+| --------------- | ------------------------------------------ |
+| **Giao diện**   | HTML5, CSS3, Bootstrap 5                   |
+| **Tương tác**   | JavaScript (thuần)                         |
+| **Lưu trữ tạm** | localStorage, sessionStorage, hoặc mảng JS |
+| **Biểu đồ**     | Chart.js (tuỳ chọn)                        |
+| **Icons**       | FontAwesome / Bootstrap Icons              |
