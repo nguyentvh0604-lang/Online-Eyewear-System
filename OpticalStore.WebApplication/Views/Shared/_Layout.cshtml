@@ -1,33 +1,108 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] — OpticalStore</title>
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-          rel="stylesheet" />
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="~/css/site.css" />
+    <title>@ViewData["Title"] - LARANA Glasses</title>
+
+    @* Google Fonts *@
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    @* Bootstrap CSS *@
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    @* Bootstrap Icons *@
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    @* Design system từ file của bạn *@
+    <link rel="stylesheet" href="~/css/larana.css" />
+
+    @* Fix Bootstrap + larana.css conflicts *@
+    <link rel="stylesheet" href="~/css/bootstrap-fixes.css" />
+
+    @await RenderSectionAsync("Styles", required: false)
 </head>
 <body>
-    <!-- NavBar -->
-    @await Html.PartialAsync("_NavBar")
- 
-    <!-- Nội dung chính -->
-    <main role="main">
-        @RenderBody()
-    </main>
- 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p class="mb-0">© 2025 OpticalStore — Nhóm 4</p>
+
+    @* Announcement bar — chỉ hiện ở trang chủ *@
+    @if (ViewData["ShowAnnouncement"] as bool? == true)
+    {
+        <div class="announcement-bar">
+            <p>Miễn phí vận chuyển cho đơn hàng trên 500.000đ &nbsp;|&nbsp; Đổi trả trong 30 ngày</p>
+        </div>
+    }
+
+    @* Header *@
+    <header class="header" id="header">
+        <div class="header__inner container">
+            <button class="btn-icon nav-toggle" aria-label="Mở menu" aria-expanded="false">
+                <span class="hamburger">
+                    <span></span><span></span><span></span>
+                </span>
+            </button>
+
+            @* Logo *@
+            <a asp-controller="Home" asp-action="Index" class="logo" aria-label="LARANA Glasses — Trang chủ">
+                <div class="logo__icon">
+                    <svg viewBox="0 0 80 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M2 18 C2 10 8 5 17 5 C26 5 32 10 32 18 C32 26 26 30 17 30 C8 30 2 26 2 18Z" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                        <path d="M48 18 C48 10 54 5 63 5 C72 5 78 10 78 18 C78 26 72 30 63 30 C54 30 48 26 48 18Z" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                        <line x1="32" y1="14" x2="48" y2="14" stroke="currentColor" stroke-width="2.5"/>
+                        <ellipse cx="17" cy="18" rx="10" ry="9" fill="var(--primary-gold-light)" opacity="0.45"/>
+                        <ellipse cx="63" cy="18" rx="10" ry="9" fill="var(--primary-gold-light)" opacity="0.45"/>
+                    </svg>
+                </div>
+                <div class="logo__text">
+                    <span class="logo__name">LARANA</span>
+                    <span class="logo__sub">glasses</span>
+                </div>
+            </a>
+
+            @* Desktop Nav *@
+            <nav class="nav" aria-label="Điều hướng chính">
+                <ul class="nav__list">
+                    <li><a asp-controller="Home" asp-action="Index" class="nav__link">Trang chủ</a></li>
+                    <li class="nav__item--has-drop">
+                        <a asp-controller="Product" asp-action="Index" class="nav__link">
+                            Sản phẩm <span class="nav__caret">›</span>
+                        </a>
+                        <div class="nav__dropdown">
+                            <a asp-controller="Product" asp-action="Index" asp-route-categoryId="1">Kính cận</a>
+                            <a asp-controller="Product" asp-action="Index" asp-route-categoryId="2">Kính mát</a>
+                            <a asp-controller="Product" asp-action="Index" asp-route-categoryId="3">Kính thể thao</a>
+                            <a asp-controller="Product" asp-action="Index" asp-route-categoryId="4">Gọng kính</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a asp-controller="Product" asp-action="Index" class="btn-icon" aria-label="Tìm kiếm">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    @* Nội dung trang *@
+    @RenderBody()
+
+    @* Footer *@
+    <footer style="background:var(--charcoal); color:rgba(255,255,255,0.6); text-align:center; padding:2rem; font-size:13px;">
+        &copy; 2025 LARANA Glasses — Bài tập ASP.NET Core MVC
     </footer>
- 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    @* JS: sticky header *@
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 10);
+        });
+    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
