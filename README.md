@@ -1,10 +1,8 @@
-# 👓 OpticalStore - Hệ thống bán kính mắt trực tuyến (Web tĩnh - Demo giao diện)
+# 👓 OpticalStore - Hệ thống bán kính mắt trực tuyến
 
 ## 📌 Tổng quan
 
-**OpticalStore** là một ứng dụng web **tĩnh** mô phỏng giao diện và luồng nghiệp vụ của hệ thống bán kính mắt trực tuyến.
-
-> ⚠️ Dự án chỉ dừng ở mức **mockup / demo luồng** – dữ liệu (sản phẩm, giỏ hàng, đơn hàng) được lưu tạm trên `localStorage` hoặc nhúng trực tiếp trong mã nguồn. Không có xử lý thanh toán thực tế, không lưu trữ dữ liệu lâu dài.
+**OpticalStore** là một ứng dụng web mô phỏng giao diện và luồng nghiệp vụ của hệ thống bán kính mắt trực tuyến.
 
 ## 🚀 Các tính năng mô phỏng (Demo)
 
