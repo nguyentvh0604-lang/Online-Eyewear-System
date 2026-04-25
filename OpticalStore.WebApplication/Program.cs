@@ -5,19 +5,36 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-// ── Đăng ký Dependency Injection (không dùng DB) ─────────────────────────
-// NV2: Repository — đọc dữ liệu hardcode từ StaticData
+// Repository
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
-// NV3: Service — xử lý logic tìm kiếm, lọc, kiểm tra tồn kho
+
+// Service
 builder.Services.AddScoped<IProductService, ProductService>();
+
+// Session
+builder.Services.AddDistributedMemoryCache();
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
+{
     app.UseExceptionHandler("/Home/Error");
+}
 
 app.UseStaticFiles();
+
 app.UseRouting();
+
+// Session phải nằm sau UseRouting
+app.UseSession();
+
 app.UseAuthorization();
 
 app.MapControllerRoute(
