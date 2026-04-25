@@ -1,8 +1,8 @@
-# 👓 OpticalStore - Hệ thống bán kính mắt trực tuyến (Web tĩnh - Demo giao diện)
+# 👓 OpticalStore - Hệ thống bán kính mắt trực tuyến
 
 ## 📌 Tổng quan
 
-**OpticalStore** là một ứng dụng web **tĩnh** mô phỏng giao diện và luồng nghiệp vụ của hệ thống bán kính mắt trực tuyến.
+**OpticalStore** là một ứng dụng web mô phỏng giao diện và luồng nghiệp vụ của hệ thống bán kính mắt trực tuyến.
 
 ## 🚀 Các tính năng mô phỏng (Demo)
 
@@ -39,10 +39,10 @@
 
 ## 🧱 Công nghệ sử dụng
 
-| Thành phần      | Công nghệ                                  |
-| --------------- | ------------------------------------------ |
-| **Giao diện**   | HTML5, CSS3, Bootstrap 5                   |
-| **Tương tác**   | JavaScript (thuần)                         |
-| **Lưu trữ tạm** | localStorage, sessionStorage, hoặc mảng JS |
-| **Biểu đồ**     | Chart.js (tuỳ chọn)                        |
-| **Icons**       | FontAwesome / Bootstrap Icons              |
+| Thành phần      | Công nghệ                                    |
+| --------------- | -------------------------------------------- |
+| **Giao diện**   | HTML5, CSS3, Bootstrap 5                     |
+| **Tương tác**   | JavaScript (thuần)                           |
+| **Lưu trữ tạm** | `localStorage`, sessionStorage, hoặc mảng JS |
+| **Biểu đồ**     | Chart.js (tuỳ chọn)                          |
+| **Icons**       | FontAwesome / Bootstrap Icons                |
