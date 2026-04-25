@@ -32,7 +32,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// Session phải nằm sau UseRouting
+
 app.UseSession();
 
 app.UseAuthorization();
