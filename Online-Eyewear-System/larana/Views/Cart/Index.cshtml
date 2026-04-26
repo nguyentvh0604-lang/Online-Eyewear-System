@@ -1,0 +1,165 @@
+@model List<OpticalStore.WebApplication.Models.CartItem>
+@{
+    ViewData["Title"] = "Giỏ hàng";
+    var total = Model.Sum(c => (c.Variant?.Price ?? 0) * c.Quantity);
+}
+
+<div class="cart-page">
+    <div class="container">
+
+        @* Page title *@
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;">
+            <h1 class="cart-page__title">
+                🛍 Giỏ hàng
+                @if (Model.Any())
+                {
+                    <span style="font-size:1rem;font-weight:400;color:var(--gray-500);margin-left:8px;">(@Model.Sum(c => c.Quantity) sản phẩm)</span>
+                }
+            </h1>
+            <a asp-controller="Product" asp-action="Index" style="font-size:14px;color:var(--primary-orange);">
+                ← Tiếp tục mua sắm
+            </a>
+        </div>
+
+        @if (TempData["CartMsg"] != null)
+        {
+            <div style="background:#d1fae5;color:#065f46;padding:12px 16px;border-radius:8px;margin-bottom:1.5rem;font-size:14px;">
+                ✓ @TempData["CartMsg"]
+            </div>
+        }
+
+        @if (!Model.Any())
+        {
+            <div style="text-align:center;padding:5rem 0;">
+                <div style="font-size:4rem;margin-bottom:1rem;">🛒</div>
+                <h3 style="font-family:var(--font-display);color:var(--charcoal);margin-bottom:0.5rem;">Giỏ hàng trống</h3>
+                <p style="color:var(--gray-500);margin-bottom:2rem;">Hãy khám phá bộ sưu tập kính mắt của chúng tôi!</p>
+                <a asp-controller="Product" asp-action="Index" class="btn btn--primary btn--lg">Khám phá sản phẩm</a>
+            </div>
+        }
+        else
+        {
+            <div style="display:grid;grid-template-columns:1fr 320px;gap:2rem;align-items:start;">
+
+                @* Cart Items *@
+                <div>
+                    @foreach (var item in Model)
+                    {
+                        var price  = item.Variant?.Price ?? 0;
+                        var subtotal = price * item.Quantity;
+                        var product = OpticalStore.WebApplication.Models.StaticData.Products
+                                        .FirstOrDefault(p => p.Variants.Any(v => v.VariantId == item.VariantId));
+
+                        <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-md);padding:1.25rem;margin-bottom:1rem;display:flex;gap:1.25rem;align-items:center;box-shadow:var(--shadow-sm);transition:box-shadow 0.2s;">
+                            @* Product image placeholder *@
+                            <div style="width:80px;height:80px;border-radius:var(--radius-sm);background:var(--accent-cream);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;">
+                                @if (product != null && !string.IsNullOrEmpty(product.ImageUrl))
+                                {
+                                    <img src="@product.ImageUrl" alt="@product.Name" style="width:100%;height:100%;object-fit:cover;" />
+                                }
+                                else
+                                {
+                                    <span style="font-size:2rem;">👓</span>
+                                }
+                            </div>
+
+                            @* Product info *@
+                            <div style="flex:1;min-width:0;">
+                                <div style="font-weight:600;color:var(--charcoal);margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                                    @(product?.Name ?? "Sản phẩm")
+                                </div>
+                                <div style="font-size:13px;color:var(--gray-500);margin-bottom:6px;">
+                                    Màu: @(item.Variant?.Color ?? "—") &nbsp;|&nbsp; Size: @(item.Variant?.Size ?? "—")
+                                </div>
+                                <div style="font-weight:600;color:var(--primary-orange);">
+                                    @price.ToString("N0")₫
+                                </div>
+                            </div>
+
+                            @* Quantity controls *@
+                            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+                                <form asp-action="UpdateQuantity" method="post" style="display:flex;align-items:center;gap:6px;">
+                                    <input type="hidden" name="cartItemId" value="@item.CartItemId" />
+                                    <button type="button" onclick="changeQty(this, -1)" style="width:30px;height:30px;border:1.5px solid var(--gray-200);border-radius:6px;background:none;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;">−</button>
+                                    <input type="number" name="quantity" value="@item.Quantity" min="1" max="99"
+                                           style="width:48px;text-align:center;border:1.5px solid var(--gray-200);border-radius:6px;padding:4px;font-size:14px;font-family:inherit;"
+                                           onchange="this.form.submit()" />
+                                    <button type="button" onclick="changeQty(this, 1)" style="width:30px;height:30px;border:1.5px solid var(--gray-200);border-radius:6px;background:none;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;">+</button>
+                                </form>
+                            </div>
+
+                            @* Subtotal *@
+                            <div style="min-width:100px;text-align:right;flex-shrink:0;">
+                                <div style="font-weight:700;color:var(--charcoal);">@subtotal.ToString("N0")₫</div>
+                            </div>
+
+                            @* Remove *@
+                            <form asp-action="Remove" method="post" style="flex-shrink:0;">
+                                <input type="hidden" name="cartItemId" value="@item.CartItemId" />
+                                <button type="submit" title="Xóa"
+                                    style="width:32px;height:32px;border:none;background:var(--accent-cream);border-radius:6px;cursor:pointer;color:var(--gray-500);font-size:16px;display:flex;align-items:center;justify-content:center;transition:all 0.15s;"
+                                    onmouseover="this.style.background='#fee2e2';this.style.color='#dc2626'"
+                                    onmouseout="this.style.background='var(--accent-cream)';this.style.color='var(--gray-500)'">
+                                    ✕
+                                </button>
+                            </form>
+                        </div>
+                    }
+                </div>
+
+                @* Order Summary *@
+                <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-lg);padding:1.5rem;box-shadow:var(--shadow-sm);position:sticky;top:90px;">
+                    <h3 style="font-family:var(--font-display);font-size:1.25rem;color:var(--charcoal);margin-bottom:1.25rem;">Tóm tắt đơn hàng</h3>
+
+                    @foreach (var item in Model)
+                    {
+                        var p = item.Variant?.Price ?? 0;
+                        var product = OpticalStore.WebApplication.Models.StaticData.Products
+                                        .FirstOrDefault(pr => pr.Variants.Any(v => v.VariantId == item.VariantId));
+                        <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--gray-500);margin-bottom:8px;">
+                            <span style="max-width:160px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                                @(product?.Name ?? "SP") × @item.Quantity
+                            </span>
+                            <span>@((p * item.Quantity).ToString("N0"))₫</span>
+                        </div>
+                    }
+
+                    <div style="height:1px;background:var(--gray-100);margin:1rem 0;"></div>
+
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+                        <span style="color:var(--gray-500);font-size:14px;">Tạm tính</span>
+                        <span style="font-weight:600;">@total.ToString("N0")₫</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+                        <span style="color:var(--gray-500);font-size:14px;">Phí vận chuyển</span>
+                        <span style="color:#16a34a;font-weight:500;font-size:14px;">Miễn phí</span>
+                    </div>
+
+                    <div style="height:1px;background:var(--gray-100);margin-bottom:1rem;"></div>
+
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
+                        <span style="font-weight:700;font-size:1rem;color:var(--charcoal);">Tổng cộng</span>
+                        <span style="font-weight:700;font-size:1.25rem;color:var(--primary-orange);">@total.ToString("N0")₫</span>
+                    </div>
+
+                    <a asp-controller="Order" asp-action="Checkout" class="btn btn--primary" style="width:100%;text-align:center;padding:14px;font-size:16px;display:block;">
+                        Tiến hành thanh toán →
+                    </a>
+                    <p style="font-size:12px;color:var(--gray-500);text-align:center;margin-top:12px;">
+                        🔒 Thanh toán an toàn &amp; bảo mật
+                    </p>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+function changeQty(btn, delta) {
+    const form = btn.closest('form');
+    const input = form.querySelector('input[name="quantity"]');
+    const newVal = Math.max(1, parseInt(input.value) + delta);
+    input.value = newVal;
+    form.submit();
+}
+</script>

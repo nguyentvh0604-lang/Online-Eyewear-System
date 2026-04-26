@@ -1,0 +1,57 @@
+@{
+    ViewData["Title"] = "Admin Dashboard";
+    ViewData["UseBootstrap"] = true;
+}
+
+<div class="container py-4">
+    <div class="d-flex align-items-center justify-content-between mb-4">
+        <div>
+            <h1 class="h3 fw-bold mb-1">🛠 Admin Dashboard</h1>
+            <p class="text-muted mb-0">LARANA Glasses — Quản trị hệ thống</p>
+        </div>
+        <a asp-controller="Auth" asp-action="Logout" class="btn btn-outline-secondary btn-sm">Đăng xuất</a>
+    </div>
+
+    @* Stats cards *@
+    <div class="row g-3 mb-4">
+        @{
+            void StatCard(string emoji, string label, string value, string color) {
+                <div class="col-6 col-md-3">
+                    <div class="card border-0 shadow-sm h-100" style="border-left: 4px solid @color !important; border-radius:12px;">
+                        <div class="card-body">
+                            <div style="font-size:2rem;margin-bottom:6px;">@emoji</div>
+                            <div class="fw-bold fs-4" style="color:@color;">@value</div>
+                            <div class="text-muted small">@label</div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        @{ StatCard("📦", "Sản phẩm", ViewBag.TotalProducts?.ToString() ?? "0", "#f97316"); }
+        @{ StatCard("👥", "Tài khoản", ViewBag.TotalUsers?.ToString() ?? "0", "#3b82f6"); }
+        @{ StatCard("🧾", "Đơn hàng", ViewBag.TotalOrders?.ToString() ?? "0", "#8b5cf6"); }
+        @{ StatCard("💰", "Doanh thu", ((decimal)(ViewBag.Revenue ?? 0m)).ToString("N0") + "₫", "#10b981"); }
+    </div>
+
+    @* Quick links *@
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm" style="border-radius:12px;">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">📋 Quản lý đơn hàng</h5>
+                    <p class="text-muted small">Xem và cập nhật trạng thái tất cả đơn hàng trong hệ thống.</p>
+                    <a asp-action="Orders" class="btn btn-primary btn-sm">Xem đơn hàng →</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm" style="border-radius:12px;">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">🛍 Sản phẩm</h5>
+                    <p class="text-muted small">Xem danh sách toàn bộ sản phẩm đang có trong hệ thống.</p>
+                    <a asp-controller="Product" asp-action="Index" class="btn btn-outline-primary btn-sm">Xem sản phẩm →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
