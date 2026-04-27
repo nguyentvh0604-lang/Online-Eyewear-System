@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using OpticalStore.WebApplication.Models.ViewModels;
 
-namespace OpticalStore.Services.Interfaces
+namespace OpticalStore.WebApplication.Services
 {
     public interface IPaymentService
     {
+        bool ProcessPayment(PaymentViewModel model);
     }
 }
