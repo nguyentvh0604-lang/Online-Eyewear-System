@@ -7,9 +7,11 @@ builder.Services.AddControllersWithViews();
 
 // Repository
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IPaymentRepository, PaymentRepository>(); 
 
 // Service
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IPaymentService, PaymentService>(); 
 
 // Session
 builder.Services.AddDistributedMemoryCache();
@@ -31,7 +33,6 @@ if (!app.Environment.IsDevelopment())
 app.UseStaticFiles();
 
 app.UseRouting();
-
 
 app.UseSession();
 
