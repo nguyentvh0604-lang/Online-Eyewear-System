@@ -8,32 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\mutek\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\OneDrive - Ninh Thuan\\Tài liệu\\LTW\\Online-Eyewear-System\\larana\\OpticalStore.WebApplication.csproj",
+      "projectUniqueName": "C:\\Users\\mutek\\online eyewear\\larana\\OpticalStore.WebApplication.csproj",
       "projectName": "OpticalStore.WebApplication",
-      "projectPath": "C:\\Users\\Admin\\OneDrive - Ninh Thuan\\Tài liệu\\LTW\\Online-Eyewear-System\\larana\\OpticalStore.WebApplication.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\OneDrive - Ninh Thuan\\Tài liệu\\LTW\\Online-Eyewear-System\\larana\\obj\\",
+      "projectPath": "C:\\Users\\mutek\\online eyewear\\larana\\OpticalStore.WebApplication.csproj",
+      "packagesPath": "C:\\Users\\mutek\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mutek\\online eyewear\\larana\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\mutek\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
