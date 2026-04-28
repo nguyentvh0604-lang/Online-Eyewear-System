@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - LARANA Glasses</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <!-- LEFT -->
+        <div class="login-left">
+            <div class="overlay"></div>
+
+            <div class="brand">
+                <h1>LARANA</h1>
+                <p>Luxury Eyewear Collection</p>
+            </div>
+
+            <div class="left-content">
+                <h2>Create Your Style</h2>
+                <p>
+                    Đăng ký tài khoản để nhận ưu đãi độc quyền và trải nghiệm mua sắm kính thời trang cao cấp.
+                </p>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="login-right">
+
+            <form class="login-box" onsubmit="return register(event)">
+
+                <h2 align="center">Đăng ký</h2>
+                <p class="sub" align="center">Tạo tài khoản mới</p>
+
+                <div class="input-group">
+                    <label>Họ và tên</label>
+                    <input type="text" id="name" placeholder="Nhập họ và tên" required autocomplete="name">
+                </div>
+
+                <div class="input-group">
+                    <label>Tên đăng nhập</label>
+                    <input type="text" id="user" placeholder="Nhập tên đăng nhập" required autocomplete="user">
+                </div>
+
+                <div class="input-group">
+                    <label>Mật khẩu</label>
+                    <input type="password" id="password" placeholder="Nhập mật khẩu" required
+                        autocomplete="new-password">
+                </div>
+
+                <div class="input-group">
+                    <label>Nhập lại mật khẩu</label>
+                    <input type="password" id="repassword" placeholder="Nhập lại mật khẩu" required
+                        autocomplete="new-password">
+                </div>
+
+                <button type="submit" class="btn-login">
+                    Đăng ký
+                </button>
+
+                <p class="register-text">
+                    Đã có tài khoản?
+                    <a href="login.html">Đăng nhập</a>
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="auth.js"></script>
+
+</body>
+
+</html>

@@ -1,183 +1,115 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LARANA Glasses — Eyewear Collection</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- ===== ANNOUNCEMENT BAR ===== -->
-    <div class="announcement-bar">
-      <p>
-        Miễn phí vận chuyển cho đơn hàng trên 500.000đ &nbsp;|&nbsp; Đổi trả
-        trong 30 ngày
-      </p>
-    </div>
 
-    <!-- ===== HEADER / NAV ===== -->
-    <header class="header" id="header">
-      <div class="header__inner container">
-        <!-- Mobile hamburger -->
-        <button
-          class="btn-icon nav-toggle"
-          aria-label="Mở menu"
-          aria-expanded="false"
-        >
-          <span class="hamburger">
-            <span></span><span></span><span></span>
-          </span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LARANA Glasses — Eyewear Collection</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ===== ANNOUNCEMENT BAR ===== -->
+  <div class="announcement-bar">
+    <p>
+      Miễn phí vận chuyển cho đơn hàng trên 500.000đ &nbsp;|&nbsp; Đổi trả
+      trong 30 ngày
+    </p>
+  </div>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <!-- Mobile hamburger -->
+      <button class="btn-icon nav-toggle" aria-label="Mở menu" aria-expanded="false">
+        <span class="hamburger">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+
+      <!-- Logo -->
+      <a href="#" class="logo" aria-label="LARANA Glasses — Trang chủ">
+        <div class="logo__icon">
+          <svg viewBox="0 0 80 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 18 C2 10 8 5 17 5 C26 5 32 10 32 18 C32 26 26 30 17 30 C8 30 2 26 2 18Z" stroke="currentColor"
+              stroke-width="2.5" fill="none" />
+            <path d="M48 18 C48 10 54 5 63 5 C72 5 78 10 78 18 C78 26 72 30 63 30 C54 30 48 26 48 18Z"
+              stroke="currentColor" stroke-width="2.5" fill="none" />
+            <line x1="32" y1="14" x2="48" y2="14" stroke="currentColor" stroke-width="2.5" />
+            <line x1="2" y1="14" x2="-4" y2="7" stroke="currentColor" stroke-width="2" />
+            <line x1="78" y1="14" x2="84" y2="7" stroke="currentColor" stroke-width="2" />
+            <ellipse cx="17" cy="18" rx="10" ry="9" fill="var(--primary-gold-light)" opacity="0.45" />
+            <ellipse cx="63" cy="18" rx="10" ry="9" fill="var(--primary-gold-light)" opacity="0.45" />
+          </svg>
+        </div>
+        <div class="logo__text">
+          <span class="logo__name">LARANA</span>
+          <span class="logo__sub">glasses</span>
+        </div>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="nav" aria-label="Điều hướng chính">
+        <ul class="nav__list">
+          <li><a href="#" class="nav__link">Trang chủ</a></li>
+          <li class="nav__item--has-drop">
+            <a href="#" class="nav__link">Bộ sưu tập <span class="nav__caret">›</span></a>
+            <div class="nav__dropdown">
+              <a href="#">Kính mắt nữ</a>
+              <a href="#">Kính mắt nam</a>
+              <a href="#">Kính râm</a>
+              <a href="#">New arrivals</a>
+            </div>
+          </li>
+          <li><a href="#" class="nav__link">Về chúng tôi</a></li>
+          <li><a href="#" class="nav__link">Liên hệ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header actions -->
+      <div class="header__actions">
+
+        <!-- Search -->
+        <button class="btn-icon" aria-label="Tìm kiếm">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
         </button>
 
-        <!-- Logo -->
-        <a href="#" class="logo" aria-label="LARANA Glasses — Trang chủ">
-          <div class="logo__icon">
-            <svg
-              viewBox="0 0 80 34"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                d="M2 18 C2 10 8 5 17 5 C26 5 32 10 32 18 C32 26 26 30 17 30 C8 30 2 26 2 18Z"
-                stroke="currentColor"
-                stroke-width="2.5"
-                fill="none"
-              />
-              <path
-                d="M48 18 C48 10 54 5 63 5 C72 5 78 10 78 18 C78 26 72 30 63 30 C54 30 48 26 48 18Z"
-                stroke="currentColor"
-                stroke-width="2.5"
-                fill="none"
-              />
-              <line
-                x1="32"
-                y1="14"
-                x2="48"
-                y2="14"
-                stroke="currentColor"
-                stroke-width="2.5"
-              />
-              <line
-                x1="2"
-                y1="14"
-                x2="-4"
-                y2="7"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-              <line
-                x1="78"
-                y1="14"
-                x2="84"
-                y2="7"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-              <ellipse
-                cx="17"
-                cy="18"
-                rx="10"
-                ry="9"
-                fill="var(--primary-gold-light)"
-                opacity="0.45"
-              />
-              <ellipse
-                cx="63"
-                cy="18"
-                rx="10"
-                ry="9"
-                fill="var(--primary-gold-light)"
-                opacity="0.45"
-              />
-            </svg>
-          </div>
-          <div class="logo__text">
-            <span class="logo__name">LARANA</span>
-            <span class="logo__sub">glasses</span>
-          </div>
-        </a>
+        <!-- Account -->
+        <div class="account-box">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
 
-        <!-- Desktop nav -->
-        <nav class="nav" aria-label="Điều hướng chính">
-          <ul class="nav__list">
-            <li><a href="#" class="nav__link">Trang chủ</a></li>
-            <li class="nav__item--has-drop">
-              <a href="#" class="nav__link"
-                >Bộ sưu tập <span class="nav__caret">›</span></a
-              >
-              <div class="nav__dropdown">
-                <a href="#">Kính mắt nữ</a>
-                <a href="#">Kính mắt nam</a>
-                <a href="#">Kính râm</a>
-                <a href="#">New arrivals</a>
-              </div>
-            </li>
-            <li><a href="#" class="nav__link">Về chúng tôi</a></li>
-            <li><a href="#" class="nav__link">Liên hệ</a></li>
-          </ul>
-        </nav>
-
-        <!-- Header actions -->
-        <div class="header__actions">
-          <button class="btn-icon" aria-label="Tìm kiếm">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-          </button>
-          <button class="btn-icon" aria-label="Tài khoản">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
-          </button>
-          <button class="btn-icon cart-btn" aria-label="Giỏ hàng (3 sản phẩm)">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <path d="M16 10a4 4 0 0 1-8 0" />
-            </svg>
-            <span class="cart-badge">3</span>
-          </button>
+          <span id="username"></span>
+          <a href="login.html" id="loginBtn" class="account-link">Đăng nhập</a>
         </div>
+
+        <!-- Cart -->
+        <button class="btn-icon cart-btn" aria-label="Giỏ hàng">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 0 1-8 0" />
+          </svg>
+
+          <span class="cart-badge">3</span>
+        </button>
+
       </div>
 
       <!-- Search bar (hidden by default) -->
       <div class="search-bar" id="searchBar" aria-hidden="true">
         <div class="container search-bar__inner">
-          <input
-            type="search"
-            class="search-bar__input"
-            placeholder="Tìm kiếm kính mắt, thương hiệu..."
-            aria-label="Tìm kiếm sản phẩm"
-          />
+          <input type="search" class="search-bar__input" placeholder="Tìm kiếm kính mắt, thương hiệu..."
+            aria-label="Tìm kiếm sản phẩm" />
           <button class="btn-icon search-bar__close" aria-label="Đóng tìm kiếm">
             ✕
           </button>
@@ -202,798 +134,472 @@
           </div>
         </nav>
       </div>
-    </header>
+  </header>
 
-    <main>
-      <!-- ===== HERO ===== -->
-      <section class="hero" aria-labelledby="hero-heading">
-        <div class="hero__bg">
-          <div class="hero__circle hero__circle--1"></div>
-          <div class="hero__circle hero__circle--2"></div>
-        </div>
-        <div class="container hero__inner">
-          <div class="hero__content">
-            <span class="hero__badge">New Collection 2025</span>
-            <h1 class="hero__heading" id="hero-heading">
-              Đôi mắt bạn<br />
-              <em>xứng đáng</em> được<br />
-              tỏa sáng
-            </h1>
-            <p class="hero__desc">
-              Bộ sưu tập kính mắt thời trang — thiết kế tinh tế, chất liệu cao
-              cấp, phong cách vượt thời gian.
-            </p>
-            <div class="hero__actions">
-              <button class="btn btn--primary btn--lg">Khám phá ngay</button>
-              <button class="btn btn--ghost btn--lg">Xem lookbook</button>
-            </div>
-            <div class="hero__stats">
-              <div class="hero__stat">
-                <span class="hero__stat-num">500+</span
-                ><span class="hero__stat-label">Mẫu kính</span>
-              </div>
-              <div class="hero__stat-divider"></div>
-              <div class="hero__stat">
-                <span class="hero__stat-num">10K+</span
-                ><span class="hero__stat-label">Khách hàng</span>
-              </div>
-              <div class="hero__stat-divider"></div>
-              <div class="hero__stat">
-                <span class="hero__stat-num">4.9★</span
-                ><span class="hero__stat-label">Đánh giá</span>
-              </div>
-            </div>
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__bg">
+        <div class="hero__circle hero__circle--1"></div>
+        <div class="hero__circle hero__circle--2"></div>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="hero__badge">New Collection 2025</span>
+          <h1 class="hero__heading" id="hero-heading">
+            Đôi mắt bạn<br />
+            <em>xứng đáng</em> được<br />
+            tỏa sáng
+          </h1>
+          <p class="hero__desc">
+            Bộ sưu tập kính mắt thời trang — thiết kế tinh tế, chất liệu cao
+            cấp, phong cách vượt thời gian.
+          </p>
+          <div class="hero__actions">
+            <button class="btn btn--primary btn--lg">Khám phá ngay</button>
+            <button class="btn btn--ghost btn--lg">Xem lookbook</button>
           </div>
-          <div class="hero__visual">
-            <div class="hero__frame">
-              <div class="hero__glasses-display">
-                <svg
-                  viewBox="0 0 320 160"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="hero__glasses-svg"
-                  aria-hidden="true"
-                >
-                  <ellipse
-                    cx="82"
-                    cy="82"
-                    rx="68"
-                    ry="62"
-                    fill="var(--primary-gold-light)"
-                    opacity="0.3"
-                  />
-                  <ellipse
-                    cx="238"
-                    cy="82"
-                    rx="68"
-                    ry="62"
-                    fill="var(--primary-gold-light)"
-                    opacity="0.3"
-                  />
-                  <path
-                    d="M14 72 C14 40 42 18 82 18 C122 18 150 40 150 72 C150 104 122 130 82 130 C42 130 14 104 14 72Z"
-                    stroke="var(--primary-orange)"
-                    stroke-width="5"
-                    fill="var(--primary-gold-light)"
-                    fill-opacity="0.25"
-                  />
-                  <path
-                    d="M170 72 C170 40 198 18 238 18 C278 18 306 40 306 72 C306 104 278 130 238 130 C198 130 170 104 170 72Z"
-                    stroke="var(--primary-orange)"
-                    stroke-width="5"
-                    fill="var(--primary-gold-light)"
-                    fill-opacity="0.25"
-                  />
-                  <line
-                    x1="150"
-                    y1="55"
-                    x2="170"
-                    y2="55"
-                    stroke="var(--primary-orange)"
-                    stroke-width="5"
-                    stroke-linecap="round"
-                  />
-                  <line
-                    x1="14"
-                    y1="55"
-                    x2="-10"
-                    y2="28"
-                    stroke="var(--primary-orange)"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                  />
-                  <line
-                    x1="306"
-                    y1="55"
-                    x2="330"
-                    y2="28"
-                    stroke="var(--primary-orange)"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                  />
-                </svg>
-                <div class="hero__tag hero__tag--1">Cat-eye</div>
-                <div class="hero__tag hero__tag--2">Rose tinted</div>
-              </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-num">500+</span><span class="hero__stat-label">Mẫu kính</span>
             </div>
-            <div class="hero__floats">
-              <div class="hero__float hero__float--a">✦ Premium</div>
-              <div class="hero__float hero__float--b">UV400</div>
+            <div class="hero__stat-divider"></div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">10K+</span><span class="hero__stat-label">Khách hàng</span>
+            </div>
+            <div class="hero__stat-divider"></div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">4.9★</span><span class="hero__stat-label">Đánh giá</span>
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- ===== CATEGORIES ===== -->
-      <section class="categories section" aria-labelledby="categories-heading">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title" id="categories-heading">Danh mục</h2>
-            <a href="#" class="section-link">Xem tất cả →</a>
-          </div>
-          <div class="categories__grid">
-            <a href="#" class="category-card category-card--large" tabindex="0">
-              <div class="category-card__bg category-card__bg--1"></div>
-              <div class="category-card__content">
-                <span class="category-card__label">Kính mắt nữ</span>
-                <span class="category-card__count">240+ mẫu</span>
-              </div>
-            </a>
-            <a href="#" class="category-card" tabindex="0">
-              <div class="category-card__bg category-card__bg--2"></div>
-              <div class="category-card__content">
-                <span class="category-card__label">Kính mắt nam</span>
-                <span class="category-card__count">180+ mẫu</span>
-              </div>
-            </a>
-            <a href="#" class="category-card" tabindex="0">
-              <div class="category-card__bg category-card__bg--3"></div>
-              <div class="category-card__content">
-                <span class="category-card__label">Kính râm</span>
-                <span class="category-card__count">120+ mẫu</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== FEATURED PRODUCTS ===== -->
-      <section class="products section" aria-labelledby="products-heading">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title" id="products-heading">Nổi bật</h2>
-            <div
-              class="products__filters"
-              role="group"
-              aria-label="Lọc sản phẩm"
-            >
-              <button class="filter-btn filter-btn--active" aria-pressed="true">
-                Tất cả
-              </button>
-              <button class="filter-btn" aria-pressed="false">
-                New arrivals
-              </button>
-              <button class="filter-btn" aria-pressed="false">
-                Bestseller
-              </button>
-              <button class="filter-btn" aria-pressed="false">Sale</button>
-            </div>
-          </div>
-
-          <div class="products__grid" aria-live="polite">
-            <!-- Product Card 1 -->
-            <article class="product-card" aria-label="Kính Cat-eye Rose">
-              <div class="product-card__media">
-                <div class="product-card__img-wrap">
-                  <div class="product-card__img-placeholder">
-                    <svg
-                      viewBox="0 0 200 100"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                    >
-                      <ellipse
-                        cx="52"
-                        cy="50"
-                        rx="40"
-                        ry="35"
-                        fill="var(--primary-gold-light)"
-                        opacity="0.6"
-                      />
-                      <ellipse
-                        cx="148"
-                        cy="50"
-                        rx="40"
-                        ry="35"
-                        fill="var(--primary-gold-light)"
-                        opacity="0.6"
-                      />
-                      <path
-                        d="M12 44C12 26 30 15 52 15C74 15 92 26 92 44C92 62 74 75 52 75C30 75 12 62 12 44Z"
-                        stroke="var(--primary-orange)"
-                        stroke-width="3"
-                        fill="none"
-                      />
-                      <path
-                        d="M108 44C108 26 126 15 148 15C170 15 188 26 188 44C188 62 170 75 148 75C126 75 108 62 108 44Z"
-                        stroke="var(--primary-orange)"
-                        stroke-width="3"
-                        fill="none"
-                      />
-                      <line
-                        x1="92"
-                        y1="34"
-                        x2="108"
-                        y2="34"
-                        stroke="var(--primary-orange)"
-                        stroke-width="3"
-                      />
-                      <line
-                        x1="12"
-                        y1="34"
-                        x2="2"
-                        y2="22"
-                        stroke="var(--primary-orange)"
-                        stroke-width="2.5"
-                      />
-                      <line
-                        x1="188"
-                        y1="34"
-                        x2="198"
-                        y2="22"
-                        stroke="var(--primary-orange)"
-                        stroke-width="2.5"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div class="product-card__badge">New</div>
-                <button
-                  class="product-card__wishlist"
-                  aria-label="Thêm vào danh sách yêu thích: Kính Cat-eye Rose"
-                >
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <span class="product-card__category">Cat-eye</span>
-                  <div class="product-card__rating" aria-label="4.8 sao">
-                    <span class="star">★★★★★</span>
-                    <span class="product-card__rating-count">(42)</span>
-                  </div>
-                </div>
-                <h3 class="product-card__name">Kính Cat-eye Rose</h3>
-                <p class="product-card__desc">
-                  Gọng nhựa cao cấp, tròng chống UV400
-                </p>
-                <div class="product-card__footer">
-                  <div class="product-card__price">
-                    <span class="price-current">590.000đ</span>
-                  </div>
-                  <button class="btn btn--primary btn--sm">Thêm vào giỏ</button>
-                </div>
-              </div>
-            </article>
-
-            <!-- Product Card 2 -->
-            <article class="product-card" aria-label="Kính Oval Vintage">
-              <div class="product-card__media">
-                <div class="product-card__img-wrap">
-                  <div
-                    class="product-card__img-placeholder product-card__img-placeholder--dark"
-                  >
-                    <svg
-                      viewBox="0 0 200 100"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                    >
-                      <ellipse
-                        cx="52"
-                        cy="50"
-                        rx="38"
-                        ry="30"
-                        fill="#333"
-                        opacity="0.15"
-                      />
-                      <ellipse
-                        cx="148"
-                        cy="50"
-                        rx="38"
-                        ry="30"
-                        fill="#333"
-                        opacity="0.15"
-                      />
-                      <ellipse
-                        cx="52"
-                        cy="50"
-                        rx="38"
-                        ry="30"
-                        stroke="var(--primary-orange)"
-                        stroke-width="3"
-                        fill="none"
-                      />
-                      <ellipse
-                        cx="148"
-                        cy="50"
-                        rx="38"
-                        ry="30"
-                        stroke="var(--primary-orange)"
-                        stroke-width="3"
-                        fill="none"
-                      />
-                      <line
-                        x1="90"
-                        y1="38"
-                        x2="110"
-                        y2="38"
-                        stroke="var(--primary-orange)"
-                        stroke-width="3"
-                      />
-                      <line
-                        x1="14"
-                        y1="38"
-                        x2="4"
-                        y2="25"
-                        stroke="var(--primary-orange)"
-                        stroke-width="2.5"
-                      />
-                      <line
-                        x1="186"
-                        y1="38"
-                        x2="196"
-                        y2="25"
-                        stroke="var(--primary-orange)"
-                        stroke-width="2.5"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div class="product-card__badge product-card__badge--sale">
-                  -20%
-                </div>
-                <button
-                  class="product-card__wishlist"
-                  aria-label="Thêm vào danh sách yêu thích: Kính Oval Vintage"
-                >
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <span class="product-card__category">Oval</span>
-                  <div class="product-card__rating" aria-label="4.6 sao">
-                    <span class="star">★★★★★</span>
-                    <span class="product-card__rating-count">(67)</span>
-                  </div>
-                </div>
-                <h3 class="product-card__name">Kính Oval Vintage</h3>
-                <p class="product-card__desc">
-                  Thiết kế retro, gọng kim loại mạ vàng
-                </p>
-                <div class="product-card__footer">
-                  <div class="product-card__price">
-                    <span class="price-current">480.000đ</span>
-                    <span class="price-old">600.000đ</span>
-                  </div>
-                  <button class="btn btn--primary btn--sm">Thêm vào giỏ</button>
-                </div>
-              </div>
-            </article>
-
-            <!-- Product Card 3 -->
-            <article class="product-card" aria-label="Kính Butterfly Pastel">
-              <div class="product-card__media">
-                <div class="product-card__img-wrap">
-                  <div
-                    class="product-card__img-placeholder product-card__img-placeholder--pink"
-                  >
-                    <svg
-                      viewBox="0 0 200 100"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M10 50 C10 30 25 10 55 15 C75 18 90 35 90 50 C90 65 75 75 55 72 C30 68 10 68 10 50Z"
-                        stroke="var(--primary-orange)"
-                        stroke-width="3"
-                        fill="var(--primary-gold-light)"
-                        fill-opacity="0.5"
-                      />
-                      <path
-                        d="M190 50 C190 30 175 10 145 15 C125 18 110 35 110 50 C110 65 125 75 145 72 C170 68 190 68 190 50Z"
-                        stroke="var(--primary-orange)"
-                        stroke-width="3"
-                        fill="var(--primary-gold-light)"
-                        fill-opacity="0.5"
-                      />
-                      <line
-                        x1="90"
-                        y1="38"
-                        x2="110"
-                        y2="38"
-                        stroke="var(--primary-orange)"
-                        stroke-width="3"
-                      />
-                      <line
-                        x1="10"
-                        y1="38"
-                        x2="0"
-                        y2="24"
-                        stroke="var(--primary-orange)"
-                        stroke-width="2.5"
-                      />
-                      <line
-                        x1="190"
-                        y1="38"
-                        x2="200"
-                        y2="24"
-                        stroke="var(--primary-orange)"
-                        stroke-width="2.5"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <button
-                  class="product-card__wishlist"
-                  aria-label="Thêm vào danh sách yêu thích: Kính Butterfly Pastel"
-                >
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <span class="product-card__category">Butterfly</span>
-                  <div class="product-card__rating" aria-label="5 sao">
-                    <span class="star">★★★★★</span>
-                    <span class="product-card__rating-count">(31)</span>
-                  </div>
-                </div>
-                <h3 class="product-card__name">Kính Butterfly Pastel</h3>
-                <p class="product-card__desc">
-                  Màu pastel nhẹ nhàng, phong cách Y2K
-                </p>
-                <div class="product-card__footer">
-                  <div class="product-card__price">
-                    <span class="price-current">520.000đ</span>
-                  </div>
-                  <button class="btn btn--primary btn--sm">Thêm vào giỏ</button>
-                </div>
-              </div>
-            </article>
-
-            <!-- Product Card 4 -->
-            <article class="product-card" aria-label="Kính Rectangle Black">
-              <div class="product-card__media">
-                <div class="product-card__img-wrap">
-                  <div
-                    class="product-card__img-placeholder product-card__img-placeholder--cream"
-                  >
-                    <svg
-                      viewBox="0 0 200 100"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                    >
-                      <rect
-                        x="12"
-                        y="28"
-                        width="80"
-                        height="50"
-                        rx="8"
-                        stroke="var(--primary-orange)"
-                        stroke-width="3.5"
-                        fill="var(--primary-orange-light)"
-                        fill-opacity="0.15"
-                      />
-                      <rect
-                        x="108"
-                        y="28"
-                        width="80"
-                        height="50"
-                        rx="8"
-                        stroke="var(--primary-orange)"
-                        stroke-width="3.5"
-                        fill="var(--primary-orange-light)"
-                        fill-opacity="0.15"
-                      />
-                      <line
-                        x1="92"
-                        y1="42"
-                        x2="108"
-                        y2="42"
-                        stroke="var(--primary-orange)"
-                        stroke-width="3.5"
-                      />
-                      <line
-                        x1="12"
-                        y1="42"
-                        x2="2"
-                        y2="30"
-                        stroke="var(--primary-orange)"
-                        stroke-width="2.5"
-                      />
-                      <line
-                        x1="188"
-                        y1="42"
-                        x2="198"
-                        y2="30"
-                        stroke="var(--primary-orange)"
-                        stroke-width="2.5"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div class="product-card__badge product-card__badge--popular">
-                  Hot
-                </div>
-                <button
-                  class="product-card__wishlist"
-                  aria-label="Thêm vào danh sách yêu thích: Kính Rectangle Black"
-                >
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <span class="product-card__category">Rectangle</span>
-                  <div class="product-card__rating" aria-label="4.9 sao">
-                    <span class="star">★★★★★</span>
-                    <span class="product-card__rating-count">(89)</span>
-                  </div>
-                </div>
-                <h3 class="product-card__name">Kính Rectangle Black</h3>
-                <p class="product-card__desc">
-                  Tông đen cổ điển, unisex, dễ phối đồ
-                </p>
-                <div class="product-card__footer">
-                  <div class="product-card__price">
-                    <span class="price-current">450.000đ</span>
-                  </div>
-                  <button class="btn btn--primary btn--sm">Thêm vào giỏ</button>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="products__load-more">
-            <button class="btn btn--outline btn--lg">Xem thêm sản phẩm</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== BANNER / PROMO ===== -->
-      <section class="promo section" aria-label="Ưu đãi đặc biệt">
-        <div class="container">
-          <div class="promo__card">
-            <div class="promo__content">
-              <span class="promo__eyebrow">Limited offer</span>
-              <h2 class="promo__title">Giảm đến <em>30%</em> bộ sưu tập hè</h2>
-              <p class="promo__desc">
-                Ưu đãi có hạn — chỉ còn 3 ngày. Nhanh tay chọn kính yêu thích
-                của bạn!
-              </p>
-              <div class="promo__actions">
-                <button class="btn btn--white btn--lg">Mua ngay</button>
-                <button class="btn btn--ghost-white btn--lg">
-                  Xem chi tiết
-                </button>
-              </div>
-            </div>
-            <div class="promo__visual" aria-hidden="true">
-              <div class="promo__circle"></div>
-              <svg
-                viewBox="0 0 260 130"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="promo__glasses"
-              >
-                <ellipse
-                  cx="65"
-                  cy="65"
-                  rx="55"
-                  ry="50"
-                  fill="white"
-                  opacity="0.12"
-                />
-                <ellipse
-                  cx="195"
-                  cy="65"
-                  rx="55"
-                  ry="50"
-                  fill="white"
-                  opacity="0.12"
-                />
+        <div class="hero__visual">
+          <div class="hero__frame">
+            <div class="hero__glasses-display">
+              <svg viewBox="0 0 320 160" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero__glasses-svg"
+                aria-hidden="true">
+                <ellipse cx="82" cy="82" rx="68" ry="62" fill="var(--primary-gold-light)" opacity="0.3" />
+                <ellipse cx="238" cy="82" rx="68" ry="62" fill="var(--primary-gold-light)" opacity="0.3" />
+                <path d="M14 72 C14 40 42 18 82 18 C122 18 150 40 150 72 C150 104 122 130 82 130 C42 130 14 104 14 72Z"
+                  stroke="var(--primary-orange)" stroke-width="5" fill="var(--primary-gold-light)"
+                  fill-opacity="0.25" />
                 <path
-                  d="M10 58C10 33 34 13 65 13C96 13 120 33 120 58C120 83 96 103 65 103C34 103 10 83 10 58Z"
-                  stroke="white"
-                  stroke-width="4"
-                  fill="none"
-                />
-                <path
-                  d="M140 58C140 33 164 13 195 13C226 13 250 33 250 58C250 83 226 103 195 103C164 103 140 83 140 58Z"
-                  stroke="white"
-                  stroke-width="4"
-                  fill="none"
-                />
-                <line
-                  x1="120"
-                  y1="45"
-                  x2="140"
-                  y2="45"
-                  stroke="white"
-                  stroke-width="4"
-                />
-                <line
-                  x1="10"
-                  y1="45"
-                  x2="-5"
-                  y2="28"
-                  stroke="white"
-                  stroke-width="3.5"
-                />
-                <line
-                  x1="250"
-                  y1="45"
-                  x2="265"
-                  y2="28"
-                  stroke="white"
-                  stroke-width="3.5"
-                />
+                  d="M170 72 C170 40 198 18 238 18 C278 18 306 40 306 72 C306 104 278 130 238 130 C198 130 170 104 170 72Z"
+                  stroke="var(--primary-orange)" stroke-width="5" fill="var(--primary-gold-light)"
+                  fill-opacity="0.25" />
+                <line x1="150" y1="55" x2="170" y2="55" stroke="var(--primary-orange)" stroke-width="5"
+                  stroke-linecap="round" />
+                <line x1="14" y1="55" x2="-10" y2="28" stroke="var(--primary-orange)" stroke-width="4"
+                  stroke-linecap="round" />
+                <line x1="306" y1="55" x2="330" y2="28" stroke="var(--primary-orange)" stroke-width="4"
+                  stroke-linecap="round" />
               </svg>
+              <div class="hero__tag hero__tag--1">Cat-eye</div>
+              <div class="hero__tag hero__tag--2">Rose tinted</div>
             </div>
           </div>
+          <div class="hero__floats">
+            <div class="hero__float hero__float--a">✦ Premium</div>
+            <div class="hero__float hero__float--b">UV400</div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ===== TESTIMONIALS ===== -->
-      <section
-        class="testimonials section"
-        aria-labelledby="testimonials-heading"
-      >
-        <div class="container">
-          <div class="section-header section-header--centered">
-            <h2 class="section-title" id="testimonials-heading">
-              Khách hàng nói gì
+    <!-- ===== CATEGORIES ===== -->
+    <section class="categories section" aria-labelledby="categories-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="categories-heading">Danh mục</h2>
+          <a href="#" class="section-link">Xem tất cả →</a>
+        </div>
+        <div class="categories__grid">
+          <a href="#" class="category-card category-card--large" tabindex="0">
+            <div class="category-card__bg category-card__bg--1"></div>
+            <div class="category-card__content">
+              <span class="category-card__label">Kính mắt nữ</span>
+              <span class="category-card__count">240+ mẫu</span>
+            </div>
+          </a>
+          <a href="#" class="category-card" tabindex="0">
+            <div class="category-card__bg category-card__bg--2"></div>
+            <div class="category-card__content">
+              <span class="category-card__label">Kính mắt nam</span>
+              <span class="category-card__count">180+ mẫu</span>
+            </div>
+          </a>
+          <a href="#" class="category-card" tabindex="0">
+            <div class="category-card__bg category-card__bg--3"></div>
+            <div class="category-card__content">
+              <span class="category-card__label">Kính râm</span>
+              <span class="category-card__count">120+ mẫu</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED PRODUCTS ===== -->
+    <section class="products section" aria-labelledby="products-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="products-heading">Nổi bật</h2>
+          <div class="products__filters" role="group" aria-label="Lọc sản phẩm">
+            <button class="filter-btn filter-btn--active" aria-pressed="true">
+              Tất cả
+            </button>
+            <button class="filter-btn" aria-pressed="false">
+              New arrivals
+            </button>
+            <button class="filter-btn" aria-pressed="false">
+              Bestseller
+            </button>
+            <button class="filter-btn" aria-pressed="false">Sale</button>
+          </div>
+        </div>
+
+        <div class="products__grid" aria-live="polite">
+          <!-- Product Card 1 -->
+          <article class="product-card" aria-label="Kính Cat-eye Rose">
+            <div class="product-card__media">
+              <div class="product-card__img-wrap">
+                <div class="product-card__img-placeholder">
+                  <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <ellipse cx="52" cy="50" rx="40" ry="35" fill="var(--primary-gold-light)" opacity="0.6" />
+                    <ellipse cx="148" cy="50" rx="40" ry="35" fill="var(--primary-gold-light)" opacity="0.6" />
+                    <path d="M12 44C12 26 30 15 52 15C74 15 92 26 92 44C92 62 74 75 52 75C30 75 12 62 12 44Z"
+                      stroke="var(--primary-orange)" stroke-width="3" fill="none" />
+                    <path
+                      d="M108 44C108 26 126 15 148 15C170 15 188 26 188 44C188 62 170 75 148 75C126 75 108 62 108 44Z"
+                      stroke="var(--primary-orange)" stroke-width="3" fill="none" />
+                    <line x1="92" y1="34" x2="108" y2="34" stroke="var(--primary-orange)" stroke-width="3" />
+                    <line x1="12" y1="34" x2="2" y2="22" stroke="var(--primary-orange)" stroke-width="2.5" />
+                    <line x1="188" y1="34" x2="198" y2="22" stroke="var(--primary-orange)" stroke-width="2.5" />
+                  </svg>
+                </div>
+              </div>
+              <div class="product-card__badge">New</div>
+              <button class="product-card__wishlist" aria-label="Thêm vào danh sách yêu thích: Kính Cat-eye Rose">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                </svg>
+              </button>
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__meta">
+                <span class="product-card__category">Cat-eye</span>
+                <div class="product-card__rating" aria-label="4.8 sao">
+                  <span class="star">★★★★★</span>
+                  <span class="product-card__rating-count">(42)</span>
+                </div>
+              </div>
+              <h3 class="product-card__name">Kính Cat-eye Rose</h3>
+              <p class="product-card__desc">
+                Gọng nhựa cao cấp, tròng chống UV400
+              </p>
+              <div class="product-card__footer">
+                <div class="product-card__price">
+                  <span class="price-current">590.000đ</span>
+                </div>
+                <button class="btn btn--primary btn--sm">Thêm vào giỏ</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 2 -->
+          <article class="product-card" aria-label="Kính Oval Vintage">
+            <div class="product-card__media">
+              <div class="product-card__img-wrap">
+                <div class="product-card__img-placeholder product-card__img-placeholder--dark">
+                  <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <ellipse cx="52" cy="50" rx="38" ry="30" fill="#333" opacity="0.15" />
+                    <ellipse cx="148" cy="50" rx="38" ry="30" fill="#333" opacity="0.15" />
+                    <ellipse cx="52" cy="50" rx="38" ry="30" stroke="var(--primary-orange)" stroke-width="3"
+                      fill="none" />
+                    <ellipse cx="148" cy="50" rx="38" ry="30" stroke="var(--primary-orange)" stroke-width="3"
+                      fill="none" />
+                    <line x1="90" y1="38" x2="110" y2="38" stroke="var(--primary-orange)" stroke-width="3" />
+                    <line x1="14" y1="38" x2="4" y2="25" stroke="var(--primary-orange)" stroke-width="2.5" />
+                    <line x1="186" y1="38" x2="196" y2="25" stroke="var(--primary-orange)" stroke-width="2.5" />
+                  </svg>
+                </div>
+              </div>
+              <div class="product-card__badge product-card__badge--sale">
+                -20%
+              </div>
+              <button class="product-card__wishlist" aria-label="Thêm vào danh sách yêu thích: Kính Oval Vintage">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                </svg>
+              </button>
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__meta">
+                <span class="product-card__category">Oval</span>
+                <div class="product-card__rating" aria-label="4.6 sao">
+                  <span class="star">★★★★★</span>
+                  <span class="product-card__rating-count">(67)</span>
+                </div>
+              </div>
+              <h3 class="product-card__name">Kính Oval Vintage</h3>
+              <p class="product-card__desc">
+                Thiết kế retro, gọng kim loại mạ vàng
+              </p>
+              <div class="product-card__footer">
+                <div class="product-card__price">
+                  <span class="price-current">480.000đ</span>
+                  <span class="price-old">600.000đ</span>
+                </div>
+                <button class="btn btn--primary btn--sm">Thêm vào giỏ</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 3 -->
+          <article class="product-card" aria-label="Kính Butterfly Pastel">
+            <div class="product-card__media">
+              <div class="product-card__img-wrap">
+                <div class="product-card__img-placeholder product-card__img-placeholder--pink">
+                  <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M10 50 C10 30 25 10 55 15 C75 18 90 35 90 50 C90 65 75 75 55 72 C30 68 10 68 10 50Z"
+                      stroke="var(--primary-orange)" stroke-width="3" fill="var(--primary-gold-light)"
+                      fill-opacity="0.5" />
+                    <path
+                      d="M190 50 C190 30 175 10 145 15 C125 18 110 35 110 50 C110 65 125 75 145 72 C170 68 190 68 190 50Z"
+                      stroke="var(--primary-orange)" stroke-width="3" fill="var(--primary-gold-light)"
+                      fill-opacity="0.5" />
+                    <line x1="90" y1="38" x2="110" y2="38" stroke="var(--primary-orange)" stroke-width="3" />
+                    <line x1="10" y1="38" x2="0" y2="24" stroke="var(--primary-orange)" stroke-width="2.5" />
+                    <line x1="190" y1="38" x2="200" y2="24" stroke="var(--primary-orange)" stroke-width="2.5" />
+                  </svg>
+                </div>
+              </div>
+              <button class="product-card__wishlist" aria-label="Thêm vào danh sách yêu thích: Kính Butterfly Pastel">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                </svg>
+              </button>
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__meta">
+                <span class="product-card__category">Butterfly</span>
+                <div class="product-card__rating" aria-label="5 sao">
+                  <span class="star">★★★★★</span>
+                  <span class="product-card__rating-count">(31)</span>
+                </div>
+              </div>
+              <h3 class="product-card__name">Kính Butterfly Pastel</h3>
+              <p class="product-card__desc">
+                Màu pastel nhẹ nhàng, phong cách Y2K
+              </p>
+              <div class="product-card__footer">
+                <div class="product-card__price">
+                  <span class="price-current">520.000đ</span>
+                </div>
+                <button class="btn btn--primary btn--sm">Thêm vào giỏ</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 4 -->
+          <article class="product-card" aria-label="Kính Rectangle Black">
+            <div class="product-card__media">
+              <div class="product-card__img-wrap">
+                <div class="product-card__img-placeholder product-card__img-placeholder--cream">
+                  <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="12" y="28" width="80" height="50" rx="8" stroke="var(--primary-orange)" stroke-width="3.5"
+                      fill="var(--primary-orange-light)" fill-opacity="0.15" />
+                    <rect x="108" y="28" width="80" height="50" rx="8" stroke="var(--primary-orange)" stroke-width="3.5"
+                      fill="var(--primary-orange-light)" fill-opacity="0.15" />
+                    <line x1="92" y1="42" x2="108" y2="42" stroke="var(--primary-orange)" stroke-width="3.5" />
+                    <line x1="12" y1="42" x2="2" y2="30" stroke="var(--primary-orange)" stroke-width="2.5" />
+                    <line x1="188" y1="42" x2="198" y2="30" stroke="var(--primary-orange)" stroke-width="2.5" />
+                  </svg>
+                </div>
+              </div>
+              <div class="product-card__badge product-card__badge--popular">
+                Hot
+              </div>
+              <button class="product-card__wishlist" aria-label="Thêm vào danh sách yêu thích: Kính Rectangle Black">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                </svg>
+              </button>
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__meta">
+                <span class="product-card__category">Rectangle</span>
+                <div class="product-card__rating" aria-label="4.9 sao">
+                  <span class="star">★★★★★</span>
+                  <span class="product-card__rating-count">(89)</span>
+                </div>
+              </div>
+              <h3 class="product-card__name">Kính Rectangle Black</h3>
+              <p class="product-card__desc">
+                Tông đen cổ điển, unisex, dễ phối đồ
+              </p>
+              <div class="product-card__footer">
+                <div class="product-card__price">
+                  <span class="price-current">450.000đ</span>
+                </div>
+                <button class="btn btn--primary btn--sm">Thêm vào giỏ</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="products__load-more">
+          <button class="btn btn--outline btn--lg">Xem thêm sản phẩm</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BANNER / PROMO ===== -->
+    <section class="promo section" aria-label="Ưu đãi đặc biệt">
+      <div class="container">
+        <div class="promo__card">
+          <div class="promo__content">
+            <span class="promo__eyebrow">Limited offer</span>
+            <h2 class="promo__title">Giảm đến <em>30%</em> bộ sưu tập hè</h2>
+            <p class="promo__desc">
+              Ưu đãi có hạn — chỉ còn 3 ngày. Nhanh tay chọn kính yêu thích
+              của bạn!
+            </p>
+            <div class="promo__actions">
+              <button class="btn btn--white btn--lg">Mua ngay</button>
+              <button class="btn btn--ghost-white btn--lg">
+                Xem chi tiết
+              </button>
+            </div>
+          </div>
+          <div class="promo__visual" aria-hidden="true">
+            <div class="promo__circle"></div>
+            <svg viewBox="0 0 260 130" fill="none" xmlns="http://www.w3.org/2000/svg" class="promo__glasses">
+              <ellipse cx="65" cy="65" rx="55" ry="50" fill="white" opacity="0.12" />
+              <ellipse cx="195" cy="65" rx="55" ry="50" fill="white" opacity="0.12" />
+              <path d="M10 58C10 33 34 13 65 13C96 13 120 33 120 58C120 83 96 103 65 103C34 103 10 83 10 58Z"
+                stroke="white" stroke-width="4" fill="none" />
+              <path d="M140 58C140 33 164 13 195 13C226 13 250 33 250 58C250 83 226 103 195 103C164 103 140 83 140 58Z"
+                stroke="white" stroke-width="4" fill="none" />
+              <line x1="120" y1="45" x2="140" y2="45" stroke="white" stroke-width="4" />
+              <line x1="10" y1="45" x2="-5" y2="28" stroke="white" stroke-width="3.5" />
+              <line x1="250" y1="45" x2="265" y2="28" stroke="white" stroke-width="3.5" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials section" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header section-header--centered">
+          <h2 class="section-title" id="testimonials-heading">
+            Khách hàng nói gì
+          </h2>
+        </div>
+        <div class="testimonials__grid">
+          <blockquote class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 sao">
+              ★★★★★
+            </div>
+            <p class="testimonial-card__text">
+              "Kính đẹp hơn mong đợi, gọng chắc chắn và nhẹ. Đội ngũ tư vấn
+              nhiệt tình, sẽ ủng hộ dài dài!"
+            </p>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">M</div>
+              <div>
+                <div class="testimonial-card__name">Minh Anh</div>
+                <div class="testimonial-card__location">TP. Hồ Chí Minh</div>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 sao">
+              ★★★★★
+            </div>
+            <p class="testimonial-card__text">
+              "Mua kính lần 3 rồi, lần nào cũng hài lòng. Chất lượng xứng với
+              giá, giao hàng nhanh."
+            </p>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar testimonial-card__avatar--b" aria-hidden="true">
+                T
+              </div>
+              <div>
+                <div class="testimonial-card__name">Thanh Hương</div>
+                <div class="testimonial-card__location">Hà Nội</div>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 sao">
+              ★★★★★
+            </div>
+            <p class="testimonial-card__text">
+              "Kính cat-eye rose cực kỳ hợp với khuôn mặt tròn. Nhân viên tư
+              vấn rất chuyên nghiệp!"
+            </p>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar testimonial-card__avatar--c" aria-hidden="true">
+                L
+              </div>
+              <div>
+                <div class="testimonial-card__name">Lan Phương</div>
+                <div class="testimonial-card__location">Đà Nẵng</div>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="newsletter section" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <div class="newsletter__inner">
+          <div class="newsletter__content">
+            <h2 class="newsletter__title" id="newsletter-heading">
+              Nhận ưu đãi độc quyền
             </h2>
+            <p class="newsletter__desc">
+              Đăng ký nhận thông tin bộ sưu tập mới và ưu đãi dành riêng cho
+              thành viên.
+            </p>
           </div>
-          <div class="testimonials__grid">
-            <blockquote class="testimonial-card">
-              <div class="testimonial-card__stars" aria-label="5 sao">
-                ★★★★★
-              </div>
-              <p class="testimonial-card__text">
-                "Kính đẹp hơn mong đợi, gọng chắc chắn và nhẹ. Đội ngũ tư vấn
-                nhiệt tình, sẽ ủng hộ dài dài!"
-              </p>
-              <footer class="testimonial-card__author">
-                <div class="testimonial-card__avatar" aria-hidden="true">M</div>
-                <div>
-                  <div class="testimonial-card__name">Minh Anh</div>
-                  <div class="testimonial-card__location">TP. Hồ Chí Minh</div>
-                </div>
-              </footer>
-            </blockquote>
-            <blockquote class="testimonial-card">
-              <div class="testimonial-card__stars" aria-label="5 sao">
-                ★★★★★
-              </div>
-              <p class="testimonial-card__text">
-                "Mua kính lần 3 rồi, lần nào cũng hài lòng. Chất lượng xứng với
-                giá, giao hàng nhanh."
-              </p>
-              <footer class="testimonial-card__author">
-                <div
-                  class="testimonial-card__avatar testimonial-card__avatar--b"
-                  aria-hidden="true"
-                >
-                  T
-                </div>
-                <div>
-                  <div class="testimonial-card__name">Thanh Hương</div>
-                  <div class="testimonial-card__location">Hà Nội</div>
-                </div>
-              </footer>
-            </blockquote>
-            <blockquote class="testimonial-card">
-              <div class="testimonial-card__stars" aria-label="5 sao">
-                ★★★★★
-              </div>
-              <p class="testimonial-card__text">
-                "Kính cat-eye rose cực kỳ hợp với khuôn mặt tròn. Nhân viên tư
-                vấn rất chuyên nghiệp!"
-              </p>
-              <footer class="testimonial-card__author">
-                <div
-                  class="testimonial-card__avatar testimonial-card__avatar--c"
-                  aria-hidden="true"
-                >
-                  L
-                </div>
-                <div>
-                  <div class="testimonial-card__name">Lan Phương</div>
-                  <div class="testimonial-card__location">Đà Nẵng</div>
-                </div>
-              </footer>
-            </blockquote>
+          <div class="newsletter__form" role="form" aria-label="Đăng ký nhận bản tin">
+            <div class="newsletter__input-group">
+              <label for="newsletter-email" class="sr-only">Địa chỉ email</label>
+              < </div>
+            </div>
           </div>
         </div>
-      </section>
+    </section>
+  </main>
+  <script src="auth.js"></script>
 
-      <!-- ===== NEWSLETTER ===== -->
-      <section class="newsletter section" aria-labelledby="newsletter-heading">
-        <div class="container">
-          <div class="newsletter__inner">
-            <div class="newsletter__content">
-              <h2 class="newsletter__title" id="newsletter-heading">
-                Nhận ưu đãi độc quyền
-              </h2>
-              <p class="newsletter__desc">
-                Đăng ký nhận thông tin bộ sưu tập mới và ưu đãi dành riêng cho
-                thành viên.
-              </p>
-            </div>
-            <div
-              class="newsletter__form"
-              role="form"
-              aria-label="Đăng ký nhận bản tin"
-            >
-              <div class="newsletter__input-group">
-                <label for="newsletter-email" class="sr-only"
-                  >Địa chỉ email</label
-                >
-                <
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-  </body>
+  <script>
+    let user = JSON.parse(localStorage.getItem("currentUser"));
+
+    let username = document.getElementById("username");
+    let loginBtn = document.getElementById("loginBtn");
+
+    if (user) {
+      username.innerText = user.name;
+      loginBtn.innerText = "Đăng xuất";
+      loginBtn.href = "#";
+
+      loginBtn.onclick = function () {
+        localStorage.removeItem("currentUser");
+        location.reload();
+      }
+    }
+  </script>
+</body>
+
 </html>
