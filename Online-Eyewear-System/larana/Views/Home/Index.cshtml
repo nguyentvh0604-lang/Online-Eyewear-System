@@ -42,20 +42,10 @@
             </div>
         </div>
         <div class="hero__visual">
-            <div class="hero__frame">
-                <div class="hero__glasses-display">
-                    <svg viewBox="0 0 320 160" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero__glasses-svg" aria-hidden="true">
-                        <ellipse cx="82" cy="82" rx="68" ry="62" fill="var(--primary-gold-light)" opacity="0.3"/>
-                        <ellipse cx="238" cy="82" rx="68" ry="62" fill="var(--primary-gold-light)" opacity="0.3"/>
-                        <path d="M14 72 C14 40 42 18 82 18 C122 18 150 40 150 72 C150 104 122 130 82 130 C42 130 14 104 14 72Z" stroke="var(--primary-orange)" stroke-width="5" fill="var(--primary-gold-light)" fill-opacity="0.25"/>
-                        <path d="M170 72 C170 40 198 18 238 18 C278 18 306 40 306 72 C306 104 278 130 238 130 C198 130 170 104 170 72Z" stroke="var(--primary-orange)" stroke-width="5" fill="var(--primary-gold-light)" fill-opacity="0.25"/>
-                        <line x1="150" y1="55" x2="170" y2="55" stroke="var(--primary-orange)" stroke-width="5" stroke-linecap="round"/>
-                        <line x1="14" y1="55" x2="-10" y2="28" stroke="var(--primary-orange)" stroke-width="4" stroke-linecap="round"/>
-                        <line x1="306" y1="55" x2="330" y2="28" stroke="var(--primary-orange)" stroke-width="4" stroke-linecap="round"/>
-                    </svg>
-                    <div class="hero__tag hero__tag--1">Cat-eye</div>
-                    <div class="hero__tag hero__tag--2">Rose tinted</div>
-                </div>
+         <div class="hero__frame">
+    <img src="/images/hero.jpg" alt="Kính mắt thời trang" 
+         style="width:100%; height:auto; border-radius:16px; object-fit:cover;" />
+</div>
             </div>
             <div class="hero__floats">
                 <div class="hero__float hero__float--a">✦ Premium</div>
@@ -74,21 +64,21 @@
         </div>
         <div class="categories__grid">
             <a asp-controller="Product" asp-action="Index" asp-route-categoryId="1" class="category-card category-card--large">
-                <div class="category-card__bg category-card__bg--1"></div>
+            <div class="category-card__bg" style="background-image: url('/images/kinh-can.jpg'); background-size: cover; background-position: center;"></div>
                 <div class="category-card__content">
                     <span class="category-card__label">Kính cận</span>
                     <span class="category-card__count">120+ mẫu</span>
                 </div>
             </a>
             <a asp-controller="Product" asp-action="Index" asp-route-categoryId="2" class="category-card">
-                <div class="category-card__bg category-card__bg--2"></div>
+               <div class="category-card__bg" style="background-image: url('/images/kinh-mat.jpg'); background-size: cover; background-position: center;"></div>
                 <div class="category-card__content">
                     <span class="category-card__label">Kính mát</span>
                     <span class="category-card__count">90+ mẫu</span>
                 </div>
             </a>
             <a asp-controller="Product" asp-action="Index" asp-route-categoryId="3" class="category-card">
-                <div class="category-card__bg category-card__bg--3"></div>
+              <div class="category-card__bg" style="background-image: url('/images/the-thao.jpg'); background-size: cover; background-position: center;"></div>
                 <div class="category-card__content">
                     <span class="category-card__label">Thể thao</span>
                     <span class="category-card__count">60+ mẫu</span>
@@ -112,13 +102,7 @@
                 <div class="product-card__media">
                     <div class="product-card__img-wrap">
                         <div class="product-card__img-placeholder">
-                            <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M12 44C12 26 30 15 52 15C74 15 92 26 92 44C92 62 74 75 52 75C30 75 12 62 12 44Z" stroke="var(--primary-orange)" stroke-width="3" fill="var(--primary-gold-light)" fill-opacity="0.5"/>
-                                <path d="M108 44C108 26 126 15 148 15C170 15 188 26 188 44C188 62 170 75 148 75C126 75 108 62 108 44Z" stroke="var(--primary-orange)" stroke-width="3" fill="var(--primary-gold-light)" fill-opacity="0.5"/>
-                                <line x1="92" y1="34" x2="108" y2="34" stroke="var(--primary-orange)" stroke-width="3"/>
-                                <line x1="12" y1="34" x2="2" y2="22" stroke="var(--primary-orange)" stroke-width="2.5"/>
-                                <line x1="188" y1="34" x2="198" y2="22" stroke="var(--primary-orange)" stroke-width="2.5"/>
-                            </svg>
+                            <img src="/images/images1.jpg" style="width:100%; height:100%; object-fit:cover;" />
                         </div>
                     </div>
                     <div class="product-card__badge">New</div>
@@ -144,13 +128,7 @@
                 <div class="product-card__media">
                     <div class="product-card__img-wrap">
                         <div class="product-card__img-placeholder product-card__img-placeholder--dark">
-                            <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <ellipse cx="52" cy="50" rx="38" ry="30" stroke="var(--primary-orange)" stroke-width="3" fill="none"/>
-                                <ellipse cx="148" cy="50" rx="38" ry="30" stroke="var(--primary-orange)" stroke-width="3" fill="none"/>
-                                <line x1="90" y1="38" x2="110" y2="38" stroke="var(--primary-orange)" stroke-width="3"/>
-                                <line x1="14" y1="38" x2="4" y2="25" stroke="var(--primary-orange)" stroke-width="2.5"/>
-                                <line x1="186" y1="38" x2="196" y2="25" stroke="var(--primary-orange)" stroke-width="2.5"/>
-                            </svg>
+                            <img src="/images/images2.jpg" style="width:100%; height:100%; object-fit:cover;" />
                         </div>
                     </div>
                     <div class="product-card__badge product-card__badge--sale">-20%</div>
@@ -177,13 +155,7 @@
                 <div class="product-card__media">
                     <div class="product-card__img-wrap">
                         <div class="product-card__img-placeholder product-card__img-placeholder--pink">
-                            <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M10 50 C10 30 25 10 55 15 C75 18 90 35 90 50 C90 65 75 75 55 72 C30 68 10 68 10 50Z" stroke="var(--primary-orange)" stroke-width="3" fill="var(--primary-gold-light)" fill-opacity="0.5"/>
-                                <path d="M190 50 C190 30 175 10 145 15 C125 18 110 35 110 50 C110 65 125 75 145 72 C170 68 190 68 190 50Z" stroke="var(--primary-orange)" stroke-width="3" fill="var(--primary-gold-light)" fill-opacity="0.5"/>
-                                <line x1="90" y1="38" x2="110" y2="38" stroke="var(--primary-orange)" stroke-width="3"/>
-                                <line x1="10" y1="38" x2="0" y2="24" stroke="var(--primary-orange)" stroke-width="2.5"/>
-                                <line x1="190" y1="38" x2="200" y2="24" stroke="var(--primary-orange)" stroke-width="2.5"/>
-                            </svg>
+                           <img src="/images/images3.jpg" style="width:100%; height:100%; object-fit:cover;" />
                         </div>
                     </div>
                 </div>
@@ -208,13 +180,7 @@
                 <div class="product-card__media">
                     <div class="product-card__img-wrap">
                         <div class="product-card__img-placeholder product-card__img-placeholder--cream">
-                            <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <rect x="12" y="28" width="80" height="50" rx="8" stroke="var(--primary-orange)" stroke-width="3.5" fill="var(--primary-orange-light)" fill-opacity="0.15"/>
-                                <rect x="108" y="28" width="80" height="50" rx="8" stroke="var(--primary-orange)" stroke-width="3.5" fill="var(--primary-orange-light)" fill-opacity="0.15"/>
-                                <line x1="92" y1="42" x2="108" y2="42" stroke="var(--primary-orange)" stroke-width="3.5"/>
-                                <line x1="12" y1="42" x2="2" y2="30" stroke="var(--primary-orange)" stroke-width="2.5"/>
-                                <line x1="188" y1="42" x2="198" y2="30" stroke="var(--primary-orange)" stroke-width="2.5"/>
-                            </svg>
+                           <img src="/images/images4.jpg" style="width:100%; height:100%; object-fit:cover;" />
                         </div>
                     </div>
                     <div class="product-card__badge product-card__badge--popular">Hot</div>
@@ -255,16 +221,9 @@
                     <a asp-controller="Product" asp-action="Index" class="btn btn--ghost-white btn--lg">Xem chi tiết</a>
                 </div>
             </div>
-            <div class="promo__visual" aria-hidden="true">
-                <div class="promo__circle"></div>
-                <svg viewBox="0 0 260 130" fill="none" xmlns="http://www.w3.org/2000/svg" class="promo__glasses">
-                    <path d="M10 58C10 33 34 13 65 13C96 13 120 33 120 58C120 83 96 103 65 103C34 103 10 83 10 58Z" stroke="white" stroke-width="4" fill="none"/>
-                    <path d="M140 58C140 33 164 13 195 13C226 13 250 33 250 58C250 83 226 103 195 103C164 103 140 83 140 58Z" stroke="white" stroke-width="4" fill="none"/>
-                    <line x1="120" y1="45" x2="140" y2="45" stroke="white" stroke-width="4"/>
-                    <line x1="10" y1="45" x2="-5" y2="28" stroke="white" stroke-width="3.5"/>
-                    <line x1="250" y1="45" x2="265" y2="28" stroke="white" stroke-width="3.5"/>
-                </svg>
-            </div>
+            <div class="promo__visual">
+   <img src="/images/promo.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:12px;" />
+</div>
         </div>
     </div>
 </section>
