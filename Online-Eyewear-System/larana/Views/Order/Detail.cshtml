@@ -1,0 +1,195 @@
+@model OpticalStore.WebApplication.Models.Order
+@{
+    ViewData["Title"] = $"Đơn hàng #{Model.OrderId}";
+
+    var (statusColor, statusBg, statusLabel) = Model.Status switch
+    {
+        "completed"  => ("#065f46", "#d1fae5", "✓ Hoàn thành"),
+        "cancelled"  => ("#991b1b", "#fee2e2", "✕ Đã hủy"),
+        "shipping"   => ("#1e40af", "#dbeafe", "🚚 Đang giao"),
+        _            => ("#92400e", "#fef3c7", "⏳ Chờ xử lý"),
+    };
+    var orderTypeLabel = Model.OrderType switch
+    {
+        "pre_order"    => "Đặt trước (Pre-order)",
+        "prescription" => "Làm kính theo đơn",
+        _              => "Mua kính có sẵn",
+    };
+}
+
+<div style="max-width:760px;margin:3rem auto;padding:0 1rem;">
+
+    @* Back link *@
+    <a asp-action="History" style="font-size:14px;color:var(--gray-500);display:inline-flex;align-items:center;gap:6px;margin-bottom:1.5rem;transition:color 0.15s;"
+       onmouseover="this.style.color='var(--primary-orange)'" onmouseout="this.style.color='var(--gray-500)'">
+        ← Lịch sử đơn hàng
+    </a>
+
+    @* Title row *@
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
+        <div>
+            <h1 style="font-family:var(--font-display);font-size:var(--text-3xl);color:var(--charcoal);margin-bottom:4px;">
+                Đơn hàng #@Model.OrderId
+            </h1>
+            <p style="font-size:14px;color:var(--gray-500);">
+                Đặt lúc @Model.CreatedAt.ToString("HH:mm, dd/MM/yyyy")
+            </p>
+        </div>
+        <span style="font-size:13px;font-weight:600;padding:6px 16px;border-radius:999px;background:@statusBg;color:@statusColor;">
+            @statusLabel
+        </span>
+    </div>
+
+    @* Order info card *@
+    <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:1.5rem;box-shadow:var(--shadow-sm);">
+        <h3 style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray-500);font-weight:600;margin-bottom:1rem;">
+            Thông tin đơn hàng
+        </h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            @{
+                void InfoItem(string label, string value) {
+                    <div>
+                        <div style="font-size:12px;color:var(--gray-400);margin-bottom:3px;">@label</div>
+                        <div style="font-size:14px;font-weight:500;color:var(--charcoal);">@value</div>
+                    </div>
+                }
+            }
+            @{ InfoItem("Loại đơn hàng", orderTypeLabel); }
+            @{ InfoItem("Trạng thái", statusLabel.Replace("✓ ","").Replace("✕ ","").Replace("🚚 ","").Replace("⏳ ","")); }
+            @{ InfoItem("Địa chỉ giao hàng", string.IsNullOrEmpty(Model.ShippingAddress) ? "—" : Model.ShippingAddress); }
+            @{ InfoItem("Ghi chú", string.IsNullOrEmpty(Model.Note) ? "Không có" : Model.Note); }
+        </div>
+    </div>
+
+    @* Order items *@
+    <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);margin-bottom:1.5rem;">
+        <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--gray-100);">
+            <h3 style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray-500);font-weight:600;">
+                Sản phẩm (@Model.OrderItems.Count)
+            </h3>
+        </div>
+
+        @foreach (var item in Model.OrderItems)
+        {
+            var product = OpticalStore.WebApplication.Models.StaticData.Products
+                            .FirstOrDefault(p => p.Variants.Any(v => v.VariantId == item.VariantId));
+            var variant  = OpticalStore.WebApplication.Models.StaticData.GetVariantById(item.VariantId);
+            var isLast   = item == Model.OrderItems.Last();
+
+            <div style="display:flex;align-items:center;gap:1rem;padding:1rem 1.5rem;@(isLast ? "" : "border-bottom:1px solid var(--gray-100);")">
+                @* Image *@
+                <div style="width:64px;height:64px;border-radius:8px;background:var(--accent-cream);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;">
+                    @if (product != null && !string.IsNullOrEmpty(product.ImageUrl))
+                    {
+                        <img src="@product.ImageUrl" alt="@product.Name" style="width:100%;height:100%;object-fit:cover;" />
+                    }
+                    else
+                    {
+                        <span style="font-size:1.5rem;">👓</span>
+                    }
+                </div>
+
+                @* Info *@
+                <div style="flex:1;min-width:0;">
+                    <div style="font-weight:600;color:var(--charcoal);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                        @(product?.Name ?? "Sản phẩm")
+                    </div>
+                    <div style="font-size:12px;color:var(--gray-500);margin-top:3px;">
+                        Màu: @(variant?.Color ?? "—") &nbsp;·&nbsp; Size: @(variant?.Size ?? "—") &nbsp;·&nbsp; SKU: @(variant?.Sku ?? "—")
+                    </div>
+                    <div style="font-size:12px;color:var(--gray-500);margin-top:2px;">
+                        @item.UnitPrice.ToString("N0")₫ × @item.Quantity
+                    </div>
+                </div>
+
+                @* Subtotal *@
+                <div style="font-weight:700;color:var(--charcoal);font-size:15px;flex-shrink:0;">
+                    @item.Subtotal.ToString("N0")₫
+                </div>
+            </div>
+        }
+
+        @* Total row *@
+        <div style="padding:1rem 1.5rem;background:var(--accent-cream);display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:14px;color:var(--gray-500);">Phí vận chuyển</span>
+            <span style="font-size:14px;color:#16a34a;font-weight:500;">Miễn phí</span>
+        </div>
+        <div style="padding:1rem 1.5rem;background:var(--accent-cream);display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--gray-100);">
+            <span style="font-weight:700;font-size:1rem;color:var(--charcoal);">Tổng cộng</span>
+            <span style="font-weight:700;font-size:1.4rem;color:var(--primary-orange);">@Model.FinalAmount.ToString("N0")₫</span>
+        </div>
+    </div>
+
+    @* Timeline *@
+    <div style="background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-lg);padding:1.5rem;box-shadow:var(--shadow-sm);margin-bottom:2rem;">
+        <h3 style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--gray-500);font-weight:600;margin-bottom:1.25rem;">
+            Tiến trình đơn hàng
+        </h3>
+        @{
+            var steps = new[]
+            {
+                ("pending",   "⏳", "Đặt hàng thành công",    "Đơn hàng đã được tiếp nhận"),
+                ("shipping",  "🚚", "Đang giao hàng",         "Đơn hàng đang trên đường giao đến bạn"),
+                ("completed", "✅", "Giao hàng thành công",   "Cảm ơn bạn đã mua hàng tại LARANA"),
+            };
+            var statusOrder = new[] { "pending", "shipping", "completed" };
+            int currentIdx  = Array.IndexOf(statusOrder, Model.Status);
+            if (Model.Status == "cancelled") currentIdx = -1;
+        }
+
+        @if (Model.Status == "cancelled")
+        {
+            <div style="display:flex;align-items:center;gap:12px;color:#991b1b;">
+                <span style="font-size:1.5rem;">✕</span>
+                <div>
+                    <div style="font-weight:600;">Đơn hàng đã bị hủy</div>
+                    <div style="font-size:13px;color:var(--gray-500);">Vui lòng liên hệ hỗ trợ nếu cần thêm thông tin.</div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div style="display:flex;flex-direction:column;gap:0;">
+                @for (int i = 0; i < steps.Length; i++)
+                {
+                    var step     = steps[i];
+                    bool done    = i <= currentIdx;
+                    bool current = i == currentIdx;
+                    bool isLast  = i == steps.Length - 1;
+
+                    <div style="display:flex;gap:1rem;@(isLast ? "" : "padding-bottom:1rem;")">
+                        @* Icon column *@
+                        <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+                            <div style="width:36px;height:36px;border-radius:50%;background:@(done ? "linear-gradient(135deg,var(--primary-orange),var(--primary-gold))" : "var(--gray-100)");display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;box-shadow:@(current ? "0 0 0 4px var(--primary-orange-light)" : "none");transition:all 0.3s;">
+                                @step.Item2
+                            </div>
+                            @if (!isLast)
+                            {
+                                <div style="width:2px;flex:1;background:@(done && i < currentIdx ? "linear-gradient(var(--primary-orange),var(--primary-gold))" : "var(--gray-100)");min-height:24px;margin:4px 0;"></div>
+                            }
+                        </div>
+                        @* Text *@
+                        <div style="padding-top:6px;padding-bottom:@(isLast ? "0" : "6px");">
+                            <div style="font-weight:@(current ? "700" : "500");color:@(done ? "var(--charcoal)" : "var(--gray-400)");font-size:14px;">
+                                @step.Item3
+                            </div>
+                            <div style="font-size:12px;color:@(done ? "var(--gray-500)" : "var(--gray-300)");margin-top:2px;">
+                                @step.Item4
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+    @* Actions *@
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a asp-controller="Product" asp-action="Index" class="btn btn--primary">
+            🛍 Tiếp tục mua sắm
+        </a>
+        <a asp-action="History" class="btn btn--ghost">
+            Tất cả đơn hàng
+        </a>
+    </div>
+</div>

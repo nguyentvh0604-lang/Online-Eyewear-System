@@ -1,0 +1,138 @@
+@model ProductDetailViewModel
+@{
+    ViewData["Title"] = Model.Product.Name;
+    ViewData["UseBootstrap"] = true;
+}
+
+<div class="container" style="padding-top: 2rem; padding-bottom: 3rem;">
+<nav aria-label="breadcrumb" class="mb-4">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a asp-controller="Home" asp-action="Index">Trang chủ</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a asp-controller="Product" asp-action="Index">Sản phẩm</a>
+        </li>
+        <li class="breadcrumb-item active">@Model.Product.Name</li>
+    </ol>
+</nav>
+
+<div class="row g-4">
+
+    @* Cột trái: ảnh *@
+    <div class="col-md-5">
+        <img src="@Model.Product.ImageUrl"
+             alt="@Model.Product.Name"
+             class="img-fluid rounded shadow w-100"
+             style="max-height:380px; object-fit:cover;" />
+    </div>
+
+    @* Cột phải: thông tin *@
+    <div class="col-md-7">
+        <h3>@Model.Product.Name</h3>
+        <span class="badge bg-secondary mb-2">@Model.Product.Category?.Name</span>
+
+        @* FIX RZ1010: Tính badge tồn kho tổng bằng if/else thay vì switch trong @{ } *@
+        @{
+            string overallBadge;
+            if (Model.Product.StockStatus == "Còn hàng")
+                overallBadge = "success";
+            else if (Model.Product.StockStatus == "Còn ít")
+                overallBadge = "warning";
+            else
+                overallBadge = "danger";
+        }
+        <span class="badge bg-@overallBadge mb-3 ms-1">
+            @Model.Product.StockStatus (còn @Model.Product.TotalStock cái)
+        </span>
+
+        <p class="text-muted mt-2">@Model.Product.Description</p>
+
+        <hr />
+
+        @* Bảng variant / tồn kho  *@
+        <h6 class="fw-bold mb-3"><i class="bi bi-list-ul me-1"></i>Các phiên bản &amp; tồn kho</h6>
+
+        @if (!Model.Variants.Any())
+        {
+            <p class="text-muted">Chưa có phiên bản nào.</p>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table table-bordered table-sm align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Mã SKU</th>
+                            <th>Màu</th>
+                            <th>Size</th>
+                            <th>Chất liệu</th>
+                            <th>Giá</th>
+                            <th>Tồn kho</th>
+                            <th>Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var v in Model.Variants)
+                        {
+                            @* FIX RZ1010: Dùng if/else thay vì @{ switch } lồng trong foreach *@
+                            string vStatus, vBadge;
+                            if (v.Stock == 0)
+                            {
+                                vStatus = "Hết hàng"; vBadge = "danger";
+                            }
+                            else if (v.Stock <= 5)
+                            {
+                                vStatus = "Còn ít"; vBadge = "warning";
+                            }
+                            else
+                            {
+                                vStatus = "Còn hàng"; vBadge = "success";
+                            }
+                            <tr>
+                                <td><code>@v.Sku</code></td>
+                                <td>@v.Color</td>
+                                <td>@v.Size</td>
+                                <td>@v.FrameMaterial</td>
+                                <td class="fw-semibold text-primary">@v.Price.ToString("N0")₫</td>
+                                <td class="text-center">@v.Stock</td>
+                                <td><span class="badge bg-@vBadge">@vStatus</span></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-muted small mt-1">
+                <i class="bi bi-info-circle me-1"></i>
+                Dùng mã SKU ở trang
+                <a asp-controller="Product" asp-action="Index">Danh sách</a>
+                để kiểm tra tồn kho nhanh.
+            </p>
+        }
+
+        @* Thêm vào giỏ hàng *@
+        <hr />
+        <h6 class="fw-bold mb-3">Thêm vào giỏ hàng</h6>
+        @foreach (var v in Model.Variants.Where(v => v.Stock > 0))
+        {
+            <form asp-controller="Cart" asp-action="Add" method="post" style="display:inline-block;margin:4px 4px 4px 0;">
+                <input type="hidden" name="variantId" value="@v.VariantId" />
+                <input type="hidden" name="quantity" value="1" />
+                <button type="submit" class="btn btn-primary btn-sm">
+                    <i class="bi bi-cart-plus me-1"></i>@v.Color / @v.Size — @v.Price.ToString("N0")₫
+                </button>
+            </form>
+        }
+        @if (!Model.Variants.Any(v => v.Stock > 0))
+        {
+            <p class="text-danger"><i class="bi bi-x-circle me-1"></i>Tất cả phiên bản đã hết hàng.</p>
+        }
+
+        <div class="mt-3">
+            <a asp-controller="Product" asp-action="Index" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left me-1"></i>Quay lại danh sách
+            </a>
+        </div>
+    </div>
+</div>
+</div>@* closes container *@

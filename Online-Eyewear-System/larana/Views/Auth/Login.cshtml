@@ -1,0 +1,57 @@
+@{
+    ViewData["Title"] = "Đăng nhập";
+}
+
+<div class="auth-page">
+    <div class="auth-card">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+            <svg viewBox="0 0 80 34" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:60px;color:var(--primary-orange)">
+                <path d="M2 18 C2 10 8 5 17 5 C26 5 32 10 32 18 C32 26 26 30 17 30 C8 30 2 26 2 18Z" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                <path d="M48 18 C48 10 54 5 63 5 C72 5 78 10 78 18 C78 26 72 30 63 30 C54 30 48 26 48 18Z" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                <line x1="32" y1="14" x2="48" y2="14" stroke="currentColor" stroke-width="2.5"/>
+            </svg>
+        </div>
+        <h1 class="auth-card__title">Đăng nhập</h1>
+
+        @if (TempData["Success"] != null)
+        {
+            <div style="background:#d1fae5;color:#065f46;padding:12px 16px;border-radius:8px;margin-bottom:16px;font-size:14px;">
+                ✓ @TempData["Success"]
+            </div>
+        }
+        @if (ViewBag.Error != null)
+        {
+            <div style="background:#fee2e2;color:#991b1b;padding:12px 16px;border-radius:8px;margin-bottom:16px;font-size:14px;">
+                ✕ @ViewBag.Error
+            </div>
+        }
+
+        <form asp-action="Login" method="post">
+            @if (ViewBag.ReturnUrl != null)
+            {
+                <input type="hidden" name="returnUrl" value="@ViewBag.ReturnUrl" />
+            }
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="ban@example.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required autocomplete="current-password" />
+            </div>
+            <button type="submit" class="btn btn--primary" style="width:100%;padding:14px;font-size:16px;margin-top:8px;">
+                Đăng nhập
+            </button>
+        </form>
+
+        <div style="text-align:center;margin-top:24px;font-size:14px;color:var(--gray-500);">
+            Chưa có tài khoản?
+            <a asp-controller="Auth" asp-action="Register" style="color:var(--primary-orange);font-weight:500;">Đăng ký ngay</a>
+        </div>
+
+        <div style="margin-top:20px;padding:14px;background:var(--accent-cream);border-radius:8px;font-size:13px;color:var(--gray-500);">
+            <strong>Demo accounts:</strong><br/>
+            👤 Admin: <code>admin@larana.vn</code> / <code>123</code><br/>
+            👤 User: <code>hn@example.com</code> / <code>123</code>
+    </div>
+</div>

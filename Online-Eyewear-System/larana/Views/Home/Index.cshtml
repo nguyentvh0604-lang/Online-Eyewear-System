@@ -1,0 +1,315 @@
+@{
+    ViewData["Title"] = "Trang chủ";
+    ViewData["ShowAnnouncement"] = true;
+}
+
+@* ===== HERO ===== *@
+<section class="hero" aria-labelledby="hero-heading">
+    <div class="hero__bg">
+        <div class="hero__circle hero__circle--1"></div>
+        <div class="hero__circle hero__circle--2"></div>
+    </div>
+    <div class="container hero__inner">
+        <div class="hero__content">
+            <span class="hero__badge">New Collection 2025</span>
+            <h1 class="hero__heading" id="hero-heading">
+                Đôi mắt bạn<br />
+                <em>xứng đáng</em> được<br />
+                tỏa sáng
+            </h1>
+            <p class="hero__desc">
+                Bộ sưu tập kính mắt thời trang — thiết kế tinh tế, chất liệu cao cấp, phong cách vượt thời gian.
+            </p>
+            <div class="hero__actions">
+                <a asp-controller="Product" asp-action="Index" class="btn btn--primary btn--lg">Khám phá ngay</a>
+                <a asp-controller="Product" asp-action="Index" class="btn btn--ghost btn--lg">Xem bộ sưu tập</a>
+            </div>
+            <div class="hero__stats">
+                <div class="hero__stat">
+                    <span class="hero__stat-num">500+</span>
+                    <span class="hero__stat-label">Mẫu kính</span>
+                </div>
+                <div class="hero__stat-divider"></div>
+                <div class="hero__stat">
+                    <span class="hero__stat-num">10K+</span>
+                    <span class="hero__stat-label">Khách hàng</span>
+                </div>
+                <div class="hero__stat-divider"></div>
+                <div class="hero__stat">
+                    <span class="hero__stat-num">4.9★</span>
+                    <span class="hero__stat-label">Đánh giá</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero__visual">
+         <div class="hero__frame">
+    <img src="/images/hero.jpg" alt="Kính mắt thời trang" 
+         style="width:100%; height:auto; border-radius:16px; object-fit:cover;" />
+</div>
+            </div>
+            <div class="hero__floats">
+                <div class="hero__float hero__float--a">✦ Premium</div>
+                <div class="hero__float hero__float--b">UV400</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@* ===== CATEGORIES ===== *@
+<section class="categories section" aria-labelledby="categories-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" id="categories-heading">Danh mục</h2>
+            <a asp-controller="Product" asp-action="Index" class="section-link">Xem tất cả →</a>
+        </div>
+        <div class="categories__grid">
+            <a asp-controller="Product" asp-action="Index" asp-route-categoryId="1" class="category-card category-card--large">
+            <div class="category-card__bg" style="background-image: url('/images/kinh-can.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="category-card__content">
+                    <span class="category-card__label">Kính cận</span>
+                    <span class="category-card__count">120+ mẫu</span>
+                </div>
+            </a>
+            <a asp-controller="Product" asp-action="Index" asp-route-categoryId="2" class="category-card">
+               <div class="category-card__bg" style="background-image: url('/images/kinh-mat.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="category-card__content">
+                    <span class="category-card__label">Kính mát</span>
+                    <span class="category-card__count">90+ mẫu</span>
+                </div>
+            </a>
+            <a asp-controller="Product" asp-action="Index" asp-route-categoryId="3" class="category-card">
+              <div class="category-card__bg" style="background-image: url('/images/the-thao.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="category-card__content">
+                    <span class="category-card__label">Thể thao</span>
+                    <span class="category-card__count">60+ mẫu</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+@* ===== FEATURED PRODUCTS ===== *@
+<section class="products section" aria-labelledby="products-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" id="products-heading">Nổi bật</h2>
+            <a asp-controller="Product" asp-action="Index" class="section-link">Xem thêm →</a>
+        </div>
+        <div class="products__grid">
+
+            @* Card 1 *@
+            <article class="product-card">
+                <div class="product-card__media">
+                    <div class="product-card__img-wrap">
+                        <div class="product-card__img-placeholder">
+                            <img src="/images/images1.jpg" style="width:100%; height:100%; object-fit:cover;" />
+                        </div>
+                    </div>
+                    <div class="product-card__badge">New</div>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__meta">
+                        <span class="product-card__category">Kính cận</span>
+                        <div class="product-card__rating"><span class="star">★★★★★</span><span class="product-card__rating-count">(42)</span></div>
+                    </div>
+                    <h3 class="product-card__name">Ray-Ban RB5154</h3>
+                    <p class="product-card__desc">Gọng acetate cao cấp, dáng clubmaster vượt thời gian</p>
+                    <div class="product-card__footer">
+                        <div class="product-card__price">
+                            <span class="price-current">2.850.000₫</span>
+                        </div>
+                        <a asp-controller="Product" asp-action="Detail" asp-route-id="1" class="btn btn--primary btn--sm">Xem chi tiết</a>
+                    </div>
+                </div>
+            </article>
+
+            @* Card 2 *@
+            <article class="product-card">
+                <div class="product-card__media">
+                    <div class="product-card__img-wrap">
+                        <div class="product-card__img-placeholder product-card__img-placeholder--dark">
+                            <img src="/images/images2.jpg" style="width:100%; height:100%; object-fit:cover;" />
+                        </div>
+                    </div>
+                    <div class="product-card__badge product-card__badge--sale">-20%</div>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__meta">
+                        <span class="product-card__category">Kính mát</span>
+                        <div class="product-card__rating"><span class="star">★★★★★</span><span class="product-card__rating-count">(67)</span></div>
+                    </div>
+                    <h3 class="product-card__name">Gucci GG0061S</h3>
+                    <p class="product-card__desc">Cat-eye biểu tượng, tròng phân cực UV400</p>
+                    <div class="product-card__footer">
+                        <div class="product-card__price">
+                            <span class="price-current">6.800.000₫</span>
+                            <span class="price-old">8.500.000₫</span>
+                        </div>
+                        <a asp-controller="Product" asp-action="Detail" asp-route-id="3" class="btn btn--primary btn--sm">Xem chi tiết</a>
+                    </div>
+                </div>
+            </article>
+
+            @* Card 3 *@
+            <article class="product-card">
+                <div class="product-card__media">
+                    <div class="product-card__img-wrap">
+                        <div class="product-card__img-placeholder product-card__img-placeholder--pink">
+                           <img src="/images/images3.jpg" style="width:100%; height:100%; object-fit:cover;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__meta">
+                        <span class="product-card__category">Thể thao</span>
+                        <div class="product-card__rating"><span class="star">★★★★★</span><span class="product-card__rating-count">(31)</span></div>
+                    </div>
+                    <h3 class="product-card__name">Oakley Radar EV</h3>
+                    <p class="product-card__desc">Khí động học, tròng Prizm™ tăng độ tương phản</p>
+                    <div class="product-card__footer">
+                        <div class="product-card__price">
+                            <span class="price-current">6.800.000₫</span>
+                        </div>
+                        <a asp-controller="Product" asp-action="Detail" asp-route-id="5" class="btn btn--primary btn--sm">Xem chi tiết</a>
+                    </div>
+                </div>
+            </article>
+
+            @* Card 4 *@
+            <article class="product-card">
+                <div class="product-card__media">
+                    <div class="product-card__img-wrap">
+                        <div class="product-card__img-placeholder product-card__img-placeholder--cream">
+                           <img src="/images/images4.jpg" style="width:100%; height:100%; object-fit:cover;" />
+                        </div>
+                    </div>
+                    <div class="product-card__badge product-card__badge--popular">Hot</div>
+                </div>
+                <div class="product-card__info">
+                    <div class="product-card__meta">
+                        <span class="product-card__category">Gọng kính</span>
+                        <div class="product-card__rating"><span class="star">★★★★★</span><span class="product-card__rating-count">(89)</span></div>
+                    </div>
+                    <h3 class="product-card__name">Silhouette 5515</h3>
+                    <p class="product-card__desc">Không vành, titanium, chỉ 1.8g — nhẹ như không đeo</p>
+                    <div class="product-card__footer">
+                        <div class="product-card__price">
+                            <span class="price-current">7.200.000₫</span>
+                        </div>
+                        <a asp-controller="Product" asp-action="Detail" asp-route-id="7" class="btn btn--primary btn--sm">Xem chi tiết</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="products__load-more">
+            <a asp-controller="Product" asp-action="Index" class="btn btn--outline btn--lg">Xem thêm sản phẩm</a>
+        </div>
+    </div>
+</section>
+
+@* ===== PROMO BANNER ===== *@
+<section class="promo section" aria-label="Ưu đãi đặc biệt">
+    <div class="container">
+        <div class="promo__card">
+            <div class="promo__content">
+                <span class="promo__eyebrow">Limited offer</span>
+                <h2 class="promo__title">Giảm đến <em>30%</em> bộ sưu tập hè</h2>
+                <p class="promo__desc">Ưu đãi có hạn — chỉ còn 3 ngày. Nhanh tay chọn kính yêu thích!</p>
+                <div class="promo__actions">
+                    <a asp-controller="Product" asp-action="Index" class="btn btn--white btn--lg">Mua ngay</a>
+                    <a asp-controller="Product" asp-action="Index" class="btn btn--ghost-white btn--lg">Xem chi tiết</a>
+                </div>
+            </div>
+            <div class="promo__visual">
+   <img src="/images/promo.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:12px;" />
+</div>
+        </div>
+    </div>
+</section>
+
+@* ===== TESTIMONIALS ===== *@
+<section class="testimonials section" aria-labelledby="testimonials-heading">
+    <div class="container">
+        <div class="section-header section-header--centered">
+            <h2 class="section-title" id="testimonials-heading">Khách hàng nói gì</h2>
+        </div>
+        <div class="testimonials__grid">
+            <blockquote class="testimonial-card">
+                <div class="testimonial-card__stars" aria-label="5 sao">★★★★★</div>
+                <p class="testimonial-card__text">"Kính đẹp hơn mong đợi, gọng chắc chắn và nhẹ. Đội ngũ tư vấn nhiệt tình, sẽ ủng hộ dài dài!"</p>
+                <footer class="testimonial-card__author">
+                    <div class="testimonial-card__avatar" aria-hidden="true">M</div>
+                    <div>
+                        <div class="testimonial-card__name">Minh Anh</div>
+                        <div class="testimonial-card__location">TP. Hồ Chí Minh</div>
+                    </div>
+                </footer>
+            </blockquote>
+            <blockquote class="testimonial-card">
+                <div class="testimonial-card__stars" aria-label="5 sao">★★★★★</div>
+                <p class="testimonial-card__text">"Mua kính lần 3 rồi, lần nào cũng hài lòng. Chất lượng xứng với giá, giao hàng nhanh."</p>
+                <footer class="testimonial-card__author">
+                    <div class="testimonial-card__avatar testimonial-card__avatar--b" aria-hidden="true">T</div>
+                    <div>
+                        <div class="testimonial-card__name">Thanh Hương</div>
+                        <div class="testimonial-card__location">Hà Nội</div>
+                    </div>
+                </footer>
+            </blockquote>
+            <blockquote class="testimonial-card">
+                <div class="testimonial-card__stars" aria-label="5 sao">★★★★★</div>
+                <p class="testimonial-card__text">"Kính cat-eye rose cực kỳ hợp với khuôn mặt tròn. Nhân viên tư vấn rất chuyên nghiệp!"</p>
+                <footer class="testimonial-card__author">
+                    <div class="testimonial-card__avatar testimonial-card__avatar--c" aria-hidden="true">L</div>
+                    <div>
+                        <div class="testimonial-card__name">Lan Phương</div>
+                        <div class="testimonial-card__location">Đà Nẵng</div>
+                    </div>
+                </footer>
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+@* ── Newsletter ─────────────────────────────────────────── *@
+<section class="newsletter" aria-labelledby="newsletter-title">
+    <div class="container">
+        <div class="newsletter__inner">
+            <h2 class="newsletter__title" id="newsletter-title">Đăng ký nhận ưu đãi</h2>
+            <p class="newsletter__desc">Nhận thông báo sản phẩm mới và ưu đãi độc quyền trước tiên.</p>
+            <div class="newsletter__form">
+                <input type="email" class="newsletter__input" placeholder="Email của bạn..." aria-label="Địa chỉ email" />
+                <button type="button" class="newsletter__submit" onclick="alert('Cảm ơn bạn đã đăng ký!')">Đăng ký</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+@* ── Features / Trust bar ─────────────────────────────── *@
+<section class="features" aria-label="Cam kết dịch vụ">
+    <div class="container">
+        <div class="features__grid">
+            <div class="feature-item">
+                <div class="feature-item__icon">🚚</div>
+                <div class="feature-item__title">Miễn phí vận chuyển</div>
+                <div class="feature-item__desc">Cho đơn hàng từ 500.000₫ toàn quốc</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item__icon">🔄</div>
+                <div class="feature-item__title">Đổi trả 30 ngày</div>
+                <div class="feature-item__desc">Không hài lòng? Hoàn tiền 100%</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item__icon">🔒</div>
+                <div class="feature-item__title">Bảo hành chính hãng</div>
+                <div class="feature-item__desc">Tất cả sản phẩm có tem bảo hành 12 tháng</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-item__icon">💬</div>
+                <div class="feature-item__title">Hỗ trợ 24/7</div>
+                <div class="feature-item__desc">Đội ngũ tư vấn chuyên nghiệp luôn sẵn sàng</div>
+            </div>
+        </div>
+    </div>
+</section>
