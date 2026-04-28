@@ -112,7 +112,7 @@ namespace OpticalStore.WebApplication.Models
                 Name = "Kính cận Ray-Ban RB5154",
                 ProductType = "frame",
                 Description = "Gọng kính cổ điển dáng clubmaster, chất liệu acetate cao cấp, phù hợp mặt oval và trái tim. Thiết kế vượt thời gian, sang trọng.",
-                ImageUrl = "https://placehold.co/400x300/0d6efd/white?text=Ray-Ban+RB5154",
+                ImageUrl = "/images/images1.jpg",
                 Category = Categories[0],
                 Variants = new()
                 {
@@ -127,7 +127,7 @@ namespace OpticalStore.WebApplication.Models
                 Name = "Kính cận Oakley OX8046",
                 ProductType = "frame",
                 Description = "Gọng titanium siêu nhẹ chỉ 18g, công nghệ Three Point Fit giữ kính ổn định. Lý tưởng cho người hoạt động nhiều.",
-                ImageUrl = "https://placehold.co/400x300/198754/white?text=Oakley+OX8046",
+                ImageUrl = "/images/images2.jpg",
                 Category = Categories[0],
                 Variants = new()
                 {
@@ -141,7 +141,7 @@ namespace OpticalStore.WebApplication.Models
                 Name = "Kính mát Gucci GG0061S",
                 ProductType = "frame",
                 Description = "Kính mát thời trang dáng cat-eye biểu tượng của Gucci, tròng phân cực UV400, phù hợp đi biển và dạo phố.",
-                ImageUrl = "https://placehold.co/400x300/dc3545/white?text=Gucci+GG0061S",
+                ImageUrl = "/images/images3.jpg",
                 Category = Categories[1],
                 Variants = new()
                 {
@@ -155,7 +155,7 @@ namespace OpticalStore.WebApplication.Models
                 Name = "Kính mát Maui Jim MJ780",
                 ProductType = "frame",
                 Description = "Tròng kính PolarizedPlus2 loại bỏ hoàn toàn chói lóa, màu sắc sống động hơn 20% so với kính thường. Lý tưởng cho hoạt động ngoài trời.",
-                ImageUrl = "https://placehold.co/400x300/0dcaf0/333?text=Maui+Jim+MJ780",
+                ImageUrl = "/images/images4.jpg",
                 Category = Categories[1],
                 Variants = new()
                 {
@@ -170,7 +170,7 @@ namespace OpticalStore.WebApplication.Models
                 Name = "Kính thể thao Oakley Radar EV",
                 ProductType = "frame",
                 Description = "Thiết kế khí động học tối ưu tầm nhìn ngoại vi, tròng Prizm™ tăng độ tương phản. Được các VĐV Olympic tin dùng.",
-                ImageUrl = "https://placehold.co/400x300/ffc107/333?text=Oakley+Radar+EV",
+                ImageUrl = "/images/images5.jpg",
                 Category = Categories[2],
                 Variants = new()
                 {
@@ -184,7 +184,7 @@ namespace OpticalStore.WebApplication.Models
                 Name = "Kính thể thao Nike Vision EV0925",
                 ProductType = "frame",
                 Description = "Gọng kính linh hoạt, đệm mũi mềm chống trơn trượt, phù hợp chạy bộ, đạp xe và các môn thể thao tốc độ cao.",
-                ImageUrl = "https://placehold.co/400x300/6c757d/white?text=Nike+EV0925",
+                ImageUrl = "/images/images6.jpg",
                 Category = Categories[2],
                 Variants = new()
                 {
@@ -198,7 +198,7 @@ namespace OpticalStore.WebApplication.Models
                 Name = "Gọng kính Titanium Silhouette 5515",
                 ProductType = "frame",
                 Description = "Gọng không vành (rimless) nổi tiếng thế giới, trọng lượng chỉ 1.8g, cảm giác như không đeo kính.",
-                ImageUrl = "https://placehold.co/400x300/6610f2/white?text=Silhouette+5515",
+                ImageUrl = "/images/images7.jpg",
                 Category = Categories[3],
                 Variants = new()
                 {
@@ -212,7 +212,7 @@ namespace OpticalStore.WebApplication.Models
                 Name = "Gọng kính Lindberg Strip 9700",
                 ProductType = "frame",
                 Description = "Thiết kế Đan Mạch tối giản, gọng acetate kết hợp càng titanium. Có thể cá nhân hóa màu sắc và kích thước theo yêu cầu.",
-                ImageUrl = "https://placehold.co/400x300/20c997/white?text=Lindberg+9700",
+                ImageUrl = "/images/images8.jpg",
                 Category = Categories[3],
                 Variants = new()
                 {
@@ -225,9 +225,9 @@ namespace OpticalStore.WebApplication.Models
 
         public static List<AppUser> Users { get; } = new()
         {
-            new() { UserId = 1, FullName = "Admin Larana",   Email = "admin@larana.vn",    Password = "admin123",    Role = "admin",    Phone = "0901234567", Address = "123 Lê Lợi, Q1, TP.HCM" },
-            new() { UserId = 2, FullName = "Nguyễn Văn An",  Email = "an@example.com",      Password = "password123", Role = "customer", Phone = "0912345678", Address = "456 Nguyễn Huệ, Q1, TP.HCM" },
-            new() { UserId = 3, FullName = "Trần Thị Bình",  Email = "binh@example.com",    Password = "password123", Role = "customer", Phone = "0923456789", Address = "789 Đinh Tiên Hoàng, Bình Thạnh" },
+            new() { UserId = 1, FullName = "Admin Larana",   Email = "admin@larana.vn",    Password = "123",    Role = "admin",    Phone = "0901234567", Address = "123 Lê Lợi, Q1, TP.HCM" },
+            new() { UserId = 2, FullName = "Trần Võ Hoài Nguyên",  Email = "hn@example.com",      Password = "123", Role = "customer", Phone = "0912345678", Address = "456 Nguyễn Huệ, Q1, TP.HCM" },
+            new() { UserId = 3, FullName = "Trần Võ Hoài Nguyên",  Email = "nguyen@example.com",    Password = "123", Role = "customer", Phone = "0923456789", Address = "11 đường số 7 Khu phố 4, TP. Thủ Đức" },
         };
 
         // ── Runtime mutable stores (InMemory) ─────────────────────────────
