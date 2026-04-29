@@ -1,0 +1,34 @@
+@model OpticalStore.WebApplication.Models.ViewModels.PaymentViewModel
+
+<h2>Xác nhận thanh toán</h2>
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red">@ViewBag.Error</p>
+}
+
+<form asp-action="Confirm" method="post">
+    <input type="hidden" asp-for="OrderId" />
+    <input type="hidden" asp-for="TotalAmount" />
+
+    <div>
+        <label>Tên khách hàng</label>
+        <input asp-for="CustomerName" />
+        <span asp-validation-for="CustomerName" style="color:red"></span>
+    </div>
+
+    <div>
+        <label>Phương thức thanh toán</label>
+        <select asp-for="PaymentMethod">
+            <option value="COD">Thanh toán khi nhận hàng</option>
+            <option value="BANK">Chuyển khoản ngân hàng</option>
+            <option value="MOMO">Ví MoMo</option>
+        </select>
+    </div>
+
+    <div>
+        <strong>Tổng tiền:</strong> @Model.TotalAmount.ToString("N0") VNĐ
+    </div>
+
+    <button type="submit">Xác nhận thanh toán</button>
+</form>
