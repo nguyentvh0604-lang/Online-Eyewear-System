@@ -1,58 +1,59 @@
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\bin\Debug\net8.0\OpticalStore.WebApplication.staticwebassets.runtime.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\bin\Debug\net8.0\OpticalStore.WebApplication.staticwebassets.endpoints.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\bin\Debug\net8.0\OpticalStore.WebApplication.exe
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\bin\Debug\net8.0\OpticalStore.WebApplication.deps.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\bin\Debug\net8.0\OpticalStore.WebApplication.runtimeconfig.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\bin\Debug\net8.0\OpticalStore.WebApplication.dll
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\bin\Debug\net8.0\OpticalStore.WebApplication.pdb
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\OpticalStore.WebApplication.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\OpticalStore.WebApplication.AssemblyInfoInputs.cache
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\OpticalStore.WebApplication.AssemblyInfo.cs
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\OpticalStore.WebApplication.csproj.CoreCompileInputs.cache
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\OpticalStore.WebApplication.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\OpticalStore.WebApplication.RazorAssemblyInfo.cache
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\OpticalStore.WebApplication.RazorAssemblyInfo.cs
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\rjimswa.dswa.cache.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\scopedcss\bundle\OpticalStore.WebApplication.styles.css
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\staticwebassets.build.json.cache
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\swae.build.ex.cache
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\OpticalStore.WebApplication.dll
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\refint\OpticalStore.WebApplication.dll
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\OpticalStore.WebApplication.pdb
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\OpticalStore.WebApplication.genruntimeconfig.cache
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\TS_Ck\larana\obj\Debug\net8.0\ref\OpticalStore.WebApplication.dll
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\bin\Debug\net8.0\OpticalStore.WebApplication.staticwebassets.endpoints.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\bin\Debug\net8.0\OpticalStore.WebApplication.staticwebassets.runtime.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\bin\Debug\net8.0\OpticalStore.WebApplication.exe
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\bin\Debug\net8.0\OpticalStore.WebApplication.deps.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\bin\Debug\net8.0\OpticalStore.WebApplication.runtimeconfig.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\bin\Debug\net8.0\OpticalStore.WebApplication.dll
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\bin\Debug\net8.0\OpticalStore.WebApplication.pdb
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.AssemblyInfoInputs.cache
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.AssemblyInfo.cs
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.csproj.CoreCompileInputs.cache
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.RazorAssemblyInfo.cache
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.RazorAssemblyInfo.cs
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\rjimswa.dswa.cache.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\scopedcss\bundle\OpticalStore.WebApplication.styles.css
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\staticwebassets.build.json.cache
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\swae.build.ex.cache
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.dll
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\refint\OpticalStore.WebApplication.dll
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.pdb
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.genruntimeconfig.cache
-C:\Users\Admin\OneDrive - Ninh Thuan\Tài liệu\LTW\Online-Eyewear-System\larana\obj\Debug\net8.0\ref\OpticalStore.WebApplication.dll
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\bin\Debug\net8.0\OpticalStore.WebApplication.staticwebassets.runtime.json
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\bin\Debug\net8.0\OpticalStore.WebApplication.staticwebassets.endpoints.json
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\bin\Debug\net8.0\OpticalStore.WebApplication.exe
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\bin\Debug\net8.0\OpticalStore.WebApplication.deps.json
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\bin\Debug\net8.0\OpticalStore.WebApplication.runtimeconfig.json
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\bin\Debug\net8.0\OpticalStore.WebApplication.dll
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\bin\Debug\net8.0\OpticalStore.WebApplication.pdb
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.AssemblyInfoInputs.cache
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.AssemblyInfo.cs
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.csproj.CoreCompileInputs.cache
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.RazorAssemblyInfo.cache
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.RazorAssemblyInfo.cs
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.sourcelink.json
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\scopedcss\bundle\OpticalStore.WebApplication.styles.css
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.dll
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\refint\OpticalStore.WebApplication.dll
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.pdb
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\OpticalStore.WebApplication.genruntimeconfig.cache
+C:\Users\mutek\Online-Eyewear-System\Online-Eyewear-System\larana\obj\Debug\net8.0\ref\OpticalStore.WebApplication.dll
+C:\Users\mutek\online eyewear\larana\bin\Debug\net8.0\OpticalStore.WebApplication.staticwebassets.endpoints.json
+C:\Users\mutek\online eyewear\larana\bin\Debug\net8.0\OpticalStore.WebApplication.staticwebassets.runtime.json
+C:\Users\mutek\online eyewear\larana\bin\Debug\net8.0\OpticalStore.WebApplication.exe
+C:\Users\mutek\online eyewear\larana\bin\Debug\net8.0\OpticalStore.WebApplication.deps.json
+C:\Users\mutek\online eyewear\larana\bin\Debug\net8.0\OpticalStore.WebApplication.runtimeconfig.json
+C:\Users\mutek\online eyewear\larana\bin\Debug\net8.0\OpticalStore.WebApplication.dll
+C:\Users\mutek\online eyewear\larana\bin\Debug\net8.0\OpticalStore.WebApplication.pdb
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\OpticalStore.WebApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\OpticalStore.WebApplication.AssemblyInfoInputs.cache
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\OpticalStore.WebApplication.AssemblyInfo.cs
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\OpticalStore.WebApplication.csproj.CoreCompileInputs.cache
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\OpticalStore.WebApplication.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\OpticalStore.WebApplication.RazorAssemblyInfo.cache
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\OpticalStore.WebApplication.RazorAssemblyInfo.cs
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\scopedcss\bundle\OpticalStore.WebApplication.styles.css
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\OpticalStore.WebApplication.dll
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\refint\OpticalStore.WebApplication.dll
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\OpticalStore.WebApplication.pdb
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\OpticalStore.WebApplication.genruntimeconfig.cache
+C:\Users\mutek\online eyewear\larana\obj\Debug\net8.0\ref\OpticalStore.WebApplication.dll

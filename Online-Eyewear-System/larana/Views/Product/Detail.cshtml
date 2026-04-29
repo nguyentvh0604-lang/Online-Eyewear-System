@@ -20,7 +20,7 @@
 <div class="row g-4">
 
     @* Cột trái: ảnh *@
-    <div class="col-md-5">
+    <div class="col-md-5 mx-auto">
         <img src="@Model.Product.ImageUrl"
              alt="@Model.Product.Name"
              class="img-fluid rounded shadow w-100"
@@ -51,7 +51,7 @@
         <hr />
 
         @* Bảng variant / tồn kho  *@
-        <h6 class="fw-bold mb-3"><i class="bi bi-list-ul me-1"></i>Các phiên bản &amp; tồn kho</h6>
+        <h6 class="fw-bold mb-3"><i class="bi bi-list-ul me-1"></i>Các phiên bản tồn kho</h6>
 
         @if (!Model.Variants.Any())
         {
